@@ -1,0 +1,170 @@
+model,params,mean_test_accuracy_score,mean_train_accuracy_score,mean_test_recall_score,mean_train_recall_score,mean_test_average_precision_score,mean_train_average_precision_score,mean_test_roc_auc_score,mean_train_roc_auc_score,ranking_test_accuracy_score,ranking_test_recall_score,ranking_test_average_precision_score,ranking_test_roc_auc_score
+LogisticRegression,"C: 10, fit_intercept: False, penalty: none, solver: newton-cg",0.65,0.72,0.77,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: none, solver: lbfgs",0.65,0.72,0.77,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: none, solver: sag",0.66,0.72,0.79,0.89,0.44,0.5,0.7,0.77,highest of its class,-,highest of its class,highest of its class
+LogisticRegression,"C: 10, fit_intercept: False, penalty: none, solver: saga",0.66,0.72,0.75,0.9,0.42,0.5,0.68,0.77,-,lowest of its class,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: l2, solver: newton-cg",0.65,0.73,0.77,0.89,0.42,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: l2, solver: lbfgs",0.65,0.73,0.77,0.89,0.42,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: l2, solver: sag",0.65,0.73,0.79,0.89,0.43,0.5,0.69,0.78,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: False, penalty: l2, solver: saga",0.65,0.72,0.75,0.89,0.42,0.49,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: none, solver: newton-cg",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,highest of its class,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: none, solver: lbfgs",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: none, solver: sag",0.64,0.71,0.79,0.91,0.42,0.49,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: none, solver: saga",0.63,0.7,0.77,0.9,0.41,0.49,0.67,0.76,-,-,-,lowest of its class
+LogisticRegression,"C: 10, fit_intercept: True, penalty: l2, solver: newton-cg",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: l2, solver: lbfgs",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: l2, solver: sag",0.62,0.7,0.77,0.91,0.4,0.48,0.67,0.76,lowest of its class,-,lowest of its class,-
+LogisticRegression,"C: 10, fit_intercept: True, penalty: l2, solver: saga",0.64,0.7,0.79,0.9,0.42,0.48,0.68,0.76,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: none, solver: newton-cg",0.65,0.72,0.77,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: none, solver: lbfgs",0.65,0.72,0.77,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: none, solver: sag",0.66,0.72,0.79,0.89,0.44,0.5,0.7,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: none, solver: saga",0.66,0.72,0.75,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: l2, solver: newton-cg",0.65,0.72,0.77,0.89,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: l2, solver: lbfgs",0.65,0.72,0.77,0.89,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: l2, solver: sag",0.65,0.72,0.77,0.9,0.43,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: False, penalty: l2, solver: saga",0.66,0.72,0.75,0.9,0.42,0.5,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: none, solver: newton-cg",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: none, solver: lbfgs",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: none, solver: sag",0.64,0.71,0.79,0.91,0.42,0.49,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: none, solver: saga",0.63,0.7,0.77,0.9,0.41,0.49,0.67,0.76,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: l2, solver: newton-cg",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: l2, solver: lbfgs",0.65,0.71,0.8,0.91,0.43,0.5,0.69,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: l2, solver: sag",0.64,0.71,0.79,0.92,0.42,0.49,0.68,0.77,-,-,-,-
+LogisticRegression,"C: 50, fit_intercept: True, penalty: l2, solver: saga",0.64,0.7,0.79,0.9,0.42,0.49,0.68,0.76,-,-,-,-
+SVC,"C: 0.5, kernel: rbf, max_iter: 1",0.67,0.64,0.19,0.21,0.33,0.31,0.53,0.52,-,-,-,-
+SVC,"C: 0.5, kernel: rbf, max_iter: 100",0.72,0.78,0.08,0.28,0.35,0.49,0.53,0.64,-,-,-,-
+SVC,"C: 0.5, kernel: rbf, max_iter: 10000",0.72,0.78,0.08,0.28,0.35,0.49,0.53,0.64,-,-,-,-
+SVC,"C: 0.5, kernel: linear, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 0.5, kernel: linear, max_iter: 100",0.66,0.67,0.61,0.6,0.4,0.4,0.65,0.65,-,-,-,-
+SVC,"C: 0.5, kernel: linear, max_iter: 10000",0.74,0.81,0.49,0.62,0.44,0.55,0.67,0.75,-,-,-,-
+SVC,"C: 0.5, kernel: poly, max_iter: 1",0.33,0.31,1.0,0.96,0.31,0.3,0.52,0.5,-,highest of its class,-,-
+SVC,"C: 0.5, kernel: poly, max_iter: 100",0.71,0.79,0.07,0.3,0.34,0.51,0.52,0.65,-,-,-,-
+SVC,"C: 0.5, kernel: poly, max_iter: 10000",0.7,0.79,0.05,0.29,0.33,0.5,0.52,0.64,-,lowest of its class,-,-
+SVC,"C: 1, kernel: rbf, max_iter: 1",0.67,0.64,0.19,0.21,0.33,0.31,0.53,0.52,-,-,-,-
+SVC,"C: 1, kernel: rbf, max_iter: 100",0.78,0.9,0.45,0.7,0.5,0.76,0.69,0.84,highest of its class,-,highest of its class,-
+SVC,"C: 1, kernel: rbf, max_iter: 10000",0.78,0.9,0.45,0.7,0.5,0.77,0.69,0.84,-,-,-,-
+SVC,"C: 1, kernel: linear, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 1, kernel: linear, max_iter: 100",0.52,0.58,0.37,0.53,0.3,0.34,0.48,0.57,-,-,lowest of its class,lowest of its class
+SVC,"C: 1, kernel: linear, max_iter: 10000",0.74,0.81,0.49,0.63,0.44,0.56,0.67,0.76,-,-,-,-
+SVC,"C: 1, kernel: poly, max_iter: 1",0.33,0.31,1.0,0.96,0.31,0.3,0.52,0.5,-,-,-,-
+SVC,"C: 1, kernel: poly, max_iter: 100",0.71,0.87,0.16,0.55,0.37,0.69,0.55,0.78,-,-,-,-
+SVC,"C: 1, kernel: poly, max_iter: 10000",0.71,0.85,0.15,0.49,0.37,0.64,0.55,0.74,-,-,-,-
+SVC,"C: 10, kernel: rbf, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 10, kernel: rbf, max_iter: 100",0.72,1.0,0.47,0.99,0.42,0.99,0.65,0.99,-,-,-,-
+SVC,"C: 10, kernel: rbf, max_iter: 10000",0.72,0.99,0.49,0.98,0.42,0.98,0.66,0.99,-,-,-,-
+SVC,"C: 10, kernel: linear, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 10, kernel: linear, max_iter: 100",0.64,0.64,0.56,0.58,0.38,0.38,0.62,0.62,-,-,-,-
+SVC,"C: 10, kernel: linear, max_iter: 10000",0.74,0.81,0.51,0.63,0.45,0.56,0.68,0.76,-,-,-,-
+SVC,"C: 10, kernel: poly, max_iter: 1",0.3,0.3,1.0,1.0,0.3,0.3,0.5,0.5,lowest of its class,-,-,-
+SVC,"C: 10, kernel: poly, max_iter: 100",0.72,0.98,0.43,0.94,0.4,0.95,0.63,0.97,-,-,-,-
+SVC,"C: 10, kernel: poly, max_iter: 10000",0.72,0.99,0.4,0.97,0.4,0.98,0.63,0.99,-,-,-,-
+SVC,"C: 20, kernel: rbf, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 20, kernel: rbf, max_iter: 100",0.72,1.0,0.48,1.0,0.42,1.0,0.65,1.0,-,-,-,-
+SVC,"C: 20, kernel: rbf, max_iter: 10000",0.71,1.0,0.48,0.99,0.41,1.0,0.65,1.0,-,-,-,-
+SVC,"C: 20, kernel: linear, max_iter: 1",0.52,0.51,0.85,0.9,0.38,0.37,0.62,0.62,-,-,-,-
+SVC,"C: 20, kernel: linear, max_iter: 100",0.64,0.64,0.56,0.58,0.38,0.38,0.62,0.62,-,-,-,-
+SVC,"C: 20, kernel: linear, max_iter: 10000",0.76,0.81,0.57,0.63,0.47,0.56,0.7,0.76,-,-,-,highest of its class
+SVC,"C: 20, kernel: poly, max_iter: 1",0.3,0.3,1.0,1.0,0.3,0.3,0.5,0.5,-,-,-,-
+SVC,"C: 20, kernel: poly, max_iter: 100",0.7,0.98,0.47,0.95,0.4,0.97,0.63,0.98,-,-,-,-
+SVC,"C: 20, kernel: poly, max_iter: 10000",0.71,1.0,0.41,0.99,0.39,0.99,0.63,0.99,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: auto, splitter: random",0.65,0.9,0.49,0.97,0.37,0.76,0.61,0.92,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: auto, splitter: best",0.69,0.94,0.56,0.99,0.41,0.83,0.65,0.95,highest of its class,highest of its class,highest of its class,highest of its class
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: sqrt, splitter: random",0.65,0.9,0.49,0.97,0.37,0.76,0.61,0.92,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: sqrt, splitter: best",0.69,0.94,0.56,0.99,0.41,0.83,0.65,0.95,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: log2, splitter: random",0.65,0.9,0.49,0.97,0.37,0.76,0.61,0.92,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 10, max_features: log2, splitter: best",0.69,0.94,0.56,0.99,0.41,0.83,0.65,0.95,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: auto, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: auto, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: sqrt, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: sqrt, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: log2, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 100, max_features: log2, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: auto, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: auto, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: sqrt, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: sqrt, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: log2, splitter: random",0.69,1.0,0.45,1.0,0.4,1.0,0.62,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: gini, max_depth: 1000, max_features: log2, splitter: best",0.67,1.0,0.44,1.0,0.37,1.0,0.6,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: auto, splitter: random",0.61,0.89,0.45,0.98,0.34,0.74,0.57,0.91,-,-,lowest of its class,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: auto, splitter: best",0.58,0.91,0.49,1.0,0.34,0.78,0.56,0.94,lowest of its class,-,-,lowest of its class
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: sqrt, splitter: random",0.61,0.89,0.45,0.98,0.34,0.74,0.57,0.91,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: sqrt, splitter: best",0.58,0.91,0.49,1.0,0.34,0.78,0.56,0.94,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: log2, splitter: random",0.61,0.89,0.45,0.98,0.34,0.74,0.57,0.91,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 10, max_features: log2, splitter: best",0.58,0.91,0.49,1.0,0.34,0.78,0.56,0.94,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: auto, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: auto, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,lowest of its class,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: sqrt, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: sqrt, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: log2, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 100, max_features: log2, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: auto, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: auto, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: sqrt, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: sqrt, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: log2, splitter: random",0.67,1.0,0.45,1.0,0.39,1.0,0.61,1.0,-,-,-,-
+DecisionTreeClassifier,"criterion: entropy, max_depth: 1000, max_features: log2, splitter: best",0.66,1.0,0.41,1.0,0.36,1.0,0.59,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 50, max_features: auto, n_estimators: 50",0.76,1.0,0.35,1.0,0.45,1.0,0.64,1.0,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+RandomForestClassifier,"criterion: gini, max_depth: 50, max_features: auto, n_estimators: 100",0.77,1.0,0.4,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 50, max_features: auto, n_estimators: 200",0.77,1.0,0.37,1.0,0.48,1.0,0.66,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 100, max_features: auto, n_estimators: 50",0.76,1.0,0.35,1.0,0.45,1.0,0.64,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 100, max_features: auto, n_estimators: 100",0.77,1.0,0.4,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 100, max_features: auto, n_estimators: 200",0.77,1.0,0.37,1.0,0.48,1.0,0.66,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 200, max_features: auto, n_estimators: 50",0.76,1.0,0.35,1.0,0.45,1.0,0.64,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 200, max_features: auto, n_estimators: 100",0.77,1.0,0.4,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: gini, max_depth: 200, max_features: auto, n_estimators: 200",0.77,1.0,0.37,1.0,0.48,1.0,0.66,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 50, max_features: auto, n_estimators: 50",0.78,1.0,0.44,1.0,0.49,1.0,0.68,1.0,highest of its class,highest of its class,highest of its class,highest of its class
+RandomForestClassifier,"criterion: entropy, max_depth: 50, max_features: auto, n_estimators: 100",0.77,1.0,0.41,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 50, max_features: auto, n_estimators: 200",0.76,1.0,0.39,1.0,0.47,1.0,0.66,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 100, max_features: auto, n_estimators: 50",0.78,1.0,0.44,1.0,0.49,1.0,0.68,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 100, max_features: auto, n_estimators: 100",0.77,1.0,0.41,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 100, max_features: auto, n_estimators: 200",0.76,1.0,0.39,1.0,0.47,1.0,0.66,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 200, max_features: auto, n_estimators: 50",0.78,1.0,0.44,1.0,0.49,1.0,0.68,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 200, max_features: auto, n_estimators: 100",0.77,1.0,0.41,1.0,0.48,1.0,0.67,1.0,-,-,-,-
+RandomForestClassifier,"criterion: entropy, max_depth: 200, max_features: auto, n_estimators: 200",0.76,1.0,0.39,1.0,0.47,1.0,0.66,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 50, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 50, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 100, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 100, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 200, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: auto, n_neighbors: 200, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 50, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 50, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 100, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 100, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 200, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: ball_tree, n_neighbors: 200, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 50, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 50, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 100, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 100, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 200, weights: uniform",0.7,0.7,0.0,0.0,0.3,0.3,0.5,0.5,-,-,-,-
+KNeighborsClassifier,"algorithm: kd_tree, n_neighbors: 200, weights: distance",0.7,1.0,0.0,1.0,0.3,1.0,0.5,1.0,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.1, n_estimators: 50",0.75,0.79,0.33,0.42,0.43,0.51,0.63,0.69,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.1, n_estimators: 100",0.75,0.84,0.4,0.59,0.44,0.6,0.65,0.77,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.1, n_estimators: 200",0.75,0.86,0.47,0.67,0.48,0.66,0.67,0.81,-,-,highest of its class,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.5, n_estimators: 50",0.75,0.87,0.51,0.69,0.46,0.67,0.68,0.82,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.5, n_estimators: 100",0.76,0.89,0.52,0.74,0.47,0.73,0.69,0.85,highest of its class,highest of its class,-,highest of its class
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.5, n_estimators: 200",0.74,0.92,0.49,0.83,0.44,0.8,0.67,0.9,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.9, n_estimators: 50",0.75,0.89,0.52,0.75,0.46,0.71,0.68,0.85,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.9, n_estimators: 100",0.73,0.92,0.48,0.83,0.43,0.79,0.66,0.89,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME.R, learning_rate: 0.9, n_estimators: 200",0.72,0.96,0.44,0.91,0.41,0.89,0.64,0.95,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.1, n_estimators: 50",0.71,0.74,0.11,0.15,0.34,0.38,0.54,0.57,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.1, n_estimators: 100",0.72,0.76,0.17,0.24,0.36,0.42,0.56,0.61,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.1, n_estimators: 200",0.74,0.77,0.29,0.34,0.42,0.47,0.62,0.65,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.5, n_estimators: 50",0.75,0.81,0.39,0.53,0.45,0.55,0.64,0.73,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.5, n_estimators: 100",0.76,0.84,0.44,0.62,0.48,0.62,0.67,0.78,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.5, n_estimators: 200",0.75,0.85,0.44,0.64,0.47,0.63,0.66,0.79,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.9, n_estimators: 50",0.76,0.82,0.47,0.59,0.47,0.57,0.67,0.75,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.9, n_estimators: 100",0.75,0.86,0.48,0.69,0.47,0.66,0.67,0.81,-,-,-,-
+AdaBoostClassifier,"algorithm: SAMME, learning_rate: 0.9, n_estimators: 200",0.75,0.88,0.49,0.73,0.48,0.71,0.68,0.84,-,-,-,-
+GaussianNB,var_smoothing: 1e-09,0.59,0.6,0.77,0.85,0.41,0.43,0.64,0.67,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+GaussianNB,var_smoothing: 1e-05,0.6,0.62,0.77,0.84,0.42,0.44,0.65,0.69,-,-,-,-
+GaussianNB,var_smoothing: 0.001,0.64,0.69,0.77,0.83,0.43,0.47,0.68,0.73,highest of its class,-,highest of its class,highest of its class
+MLPClassifier,"activation: relu, learning_rate_init: 0.001, max_iter: 100",0.75,0.78,0.28,0.38,0.43,0.49,0.61,0.67,-,lowest of its class,-,lowest of its class
+MLPClassifier,"activation: relu, learning_rate_init: 0.001, max_iter: 1000",0.76,0.91,0.52,0.79,0.48,0.78,0.69,0.88,highest of its class,highest of its class,highest of its class,highest of its class
+MLPClassifier,"activation: relu, learning_rate_init: 0.01, max_iter: 100",0.76,0.91,0.52,0.78,0.48,0.77,0.69,0.87,-,-,-,-
+MLPClassifier,"activation: relu, learning_rate_init: 0.01, max_iter: 1000",0.74,1.0,0.52,1.0,0.45,1.0,0.67,1.0,-,-,-,-
+MLPClassifier,"activation: tanh, learning_rate_init: 0.001, max_iter: 100",0.76,0.79,0.49,0.55,0.48,0.52,0.68,0.73,-,-,-,-
+MLPClassifier,"activation: tanh, learning_rate_init: 0.001, max_iter: 1000",0.75,0.82,0.49,0.62,0.46,0.58,0.68,0.77,-,-,-,-
+MLPClassifier,"activation: tanh, learning_rate_init: 0.01, max_iter: 100",0.75,0.84,0.49,0.67,0.45,0.62,0.68,0.79,-,-,-,-
+MLPClassifier,"activation: tanh, learning_rate_init: 0.01, max_iter: 1000",0.72,1.0,0.49,1.0,0.42,1.0,0.65,1.0,lowest of its class,-,lowest of its class,-

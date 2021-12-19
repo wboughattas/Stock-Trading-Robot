@@ -1,0 +1,65 @@
+model,params,mean_test_explained_variance_score,mean_train_explained_variance_score,mean_test_r2_score,mean_train_r2_score,ranking_test_explained_variance_score,ranking_test_r2_score
+LinearRegression,fit_intercept: True,1.0,1.0,1.0,1.0,lowest of its class,lowest of its class
+LinearRegression,fit_intercept: False,1.0,1.0,1.0,1.0,-,-
+SVR,"kernel: linear, gamma: scale, C: 20",1.0,1.0,1.0,1.0,highest of its class,highest of its class
+SVR,"kernel: linear, gamma: auto, C: 20",1.0,1.0,1.0,1.0,-,-
+SVR,"kernel: linear, gamma: auto, C: 1",1.0,1.0,1.0,1.0,-,-
+SVR,"kernel: rbf, gamma: scale, C: 1",0.64,0.65,0.61,0.61,lowest of its class,lowest of its class
+SVR,"kernel: rbf, gamma: auto, C: 1",0.64,0.65,0.61,0.61,-,-
+SVR,"kernel: rbf, gamma: scale, C: 10",0.96,0.96,0.96,0.96,-,-
+SVR,"kernel: rbf, gamma: auto, C: 10",0.96,0.96,0.96,0.96,-,-
+SVR,"kernel: linear, gamma: scale, C: 1",1.0,1.0,1.0,1.0,-,-
+SVR,"kernel: rbf, gamma: scale, C: 20",0.98,0.98,0.98,0.98,-,-
+SVR,"kernel: linear, gamma: scale, C: 10",1.0,1.0,1.0,1.0,-,-
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.0, max_depth: 100, criterion: poisson",0.89,0.9,0.89,0.9,-,-
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.1, max_depth: 1000, criterion: poisson",0.38,0.39,0.38,0.39,lowest of its class,lowest of its class
+DecisionTreeRegressor,"splitter: random, min_impurity_decrease: 0.0, max_depth: 100, criterion: squared_error",1.0,1.0,1.0,1.0,highest of its class,highest of its class
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.5, max_depth: 100, criterion: absolute_error",0.98,0.98,0.98,0.98,-,-
+DecisionTreeRegressor,"splitter: random, min_impurity_decrease: 0.5, max_depth: 1000, criterion: absolute_error",0.96,0.97,0.96,0.97,-,-
+DecisionTreeRegressor,"splitter: random, min_impurity_decrease: 0.5, max_depth: 100, criterion: squared_error",0.99,1.0,0.99,1.0,-,-
+DecisionTreeRegressor,"splitter: random, min_impurity_decrease: 0.0, max_depth: 1000, criterion: friedman_mse",1.0,1.0,1.0,1.0,-,-
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.9, max_depth: 1000, criterion: absolute_error",0.96,0.97,0.96,0.97,-,-
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.0, max_depth: 1000, criterion: poisson",0.99,1.0,0.99,1.0,-,-
+DecisionTreeRegressor,"splitter: best, min_impurity_decrease: 0.1, max_depth: 1000, criterion: absolute_error",0.99,0.99,0.99,0.99,-,-
+RandomForestRegressor,"n_estimators: 200, max_features: auto, max_depth: 50, criterion: friedman_mse",1.0,1.0,1.0,1.0,highest of its class,highest of its class
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 200, criterion: absolute_error",1.0,1.0,1.0,1.0,-,-
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 100, criterion: friedman_mse",1.0,1.0,1.0,1.0,-,-
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 200, criterion: poisson",0.99,1.0,0.99,1.0,-,-
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 100, criterion: poisson",0.94,0.95,0.94,0.95,lowest of its class,lowest of its class
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 200, criterion: squared_error",1.0,1.0,1.0,1.0,-,-
+RandomForestRegressor,"n_estimators: 200, max_features: auto, max_depth: 100, criterion: poisson",0.94,0.95,0.94,0.95,-,-
+RandomForestRegressor,"n_estimators: 200, max_features: auto, max_depth: 50, criterion: squared_error",1.0,1.0,1.0,1.0,-,-
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 50, criterion: friedman_mse",1.0,1.0,1.0,1.0,-,-
+RandomForestRegressor,"n_estimators: 100, max_features: auto, max_depth: 50, criterion: squared_error",1.0,1.0,1.0,1.0,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 200, algorithm: auto",0.84,1.0,0.83,1.0,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 100, algorithm: auto",0.88,1.0,0.88,1.0,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 50, algorithm: ball_tree",0.91,1.0,0.91,1.0,highest of its class,highest of its class
+KNeighborsRegressor,"weights: uniform, n_neighbors: 100, algorithm: ball_tree",0.86,0.87,0.86,0.86,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 100, algorithm: auto",0.86,0.87,0.86,0.86,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 200, algorithm: ball_tree",0.84,1.0,0.83,1.0,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 50, algorithm: ball_tree",0.9,0.9,0.89,0.9,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 100, algorithm: ball_tree",0.88,1.0,0.88,1.0,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 200, algorithm: ball_tree",0.82,0.82,0.81,0.82,lowest of its class,lowest of its class
+KNeighborsRegressor,"weights: uniform, n_neighbors: 50, algorithm: auto",0.9,0.9,0.89,0.9,-,-
+AdaBoostRegressor,"n_estimators: 100, loss: square, learning_rate: 0.1",0.98,0.98,0.98,0.98,-,highest of its class
+AdaBoostRegressor,"n_estimators: 100, loss: linear, learning_rate: 0.9",0.99,0.99,0.98,0.98,highest of its class,-
+AdaBoostRegressor,"n_estimators: 50, loss: linear, learning_rate: 0.1",0.97,0.98,0.97,0.98,lowest of its class,lowest of its class
+AdaBoostRegressor,"n_estimators: 200, loss: exponential, learning_rate: 0.1",0.98,0.98,0.98,0.98,-,-
+AdaBoostRegressor,"n_estimators: 50, loss: linear, learning_rate: 0.9",0.98,0.98,0.98,0.98,-,-
+AdaBoostRegressor,"n_estimators: 50, loss: square, learning_rate: 0.5",0.98,0.99,0.98,0.98,-,-
+AdaBoostRegressor,"n_estimators: 50, loss: exponential, learning_rate: 0.9",0.98,0.98,0.98,0.98,-,-
+AdaBoostRegressor,"n_estimators: 200, loss: square, learning_rate: 0.9",0.99,0.99,0.97,0.98,-,-
+AdaBoostRegressor,"n_estimators: 50, loss: linear, learning_rate: 0.5",0.98,0.98,0.98,0.98,-,-
+AdaBoostRegressor,"n_estimators: 100, loss: exponential, learning_rate: 0.5",0.98,0.99,0.98,0.98,-,-
+GaussianProcessRegressor,alpha: 1e-10,0.82,1.0,0.79,1.0,lowest of its class,lowest of its class
+GaussianProcessRegressor,alpha: 1e-05,0.82,1.0,0.79,1.0,-,-
+GaussianProcessRegressor,alpha: 0.001,0.82,1.0,0.79,1.0,-,-
+MLPRegressor,"max_iter: 100, hidden_layer_sizes: 50",0.91,0.92,0.91,0.91,lowest of its class,lowest of its class
+MLPRegressor,"max_iter: 200, hidden_layer_sizes: 50",0.99,0.99,0.99,0.99,-,-
+MLPRegressor,"max_iter: 300, hidden_layer_sizes: 50",1.0,1.0,1.0,1.0,highest of its class,highest of its class
+MLPRegressor,"max_iter: 100, hidden_layer_sizes: 100",0.97,0.97,0.97,0.97,-,-
+MLPRegressor,"max_iter: 200, hidden_layer_sizes: 100",1.0,1.0,1.0,1.0,-,-
+MLPRegressor,"max_iter: 300, hidden_layer_sizes: 100",1.0,1.0,1.0,1.0,-,-
+MLPRegressor,"max_iter: 100, hidden_layer_sizes: 150",0.98,0.98,0.98,0.98,-,-
+MLPRegressor,"max_iter: 200, hidden_layer_sizes: 150",1.0,1.0,1.0,1.0,-,-
+MLPRegressor,"max_iter: 300, hidden_layer_sizes: 150",1.0,1.0,1.0,1.0,-,-

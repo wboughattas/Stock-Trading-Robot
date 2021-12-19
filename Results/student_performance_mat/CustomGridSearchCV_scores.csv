@@ -13,39 +13,168 @@ SVR,"C: 20, gamma: auto, kernel: rbf",3.07,0.17,0.11,0.98,0.1,0.98,15.01,0.19,-,
 SVR,"C: 20, gamma: auto, kernel: linear",3.25,2.33,0.06,0.24,0.05,0.23,15.73,9.69,-,-,-,-
 SVR,"C: 20, gamma: scale, kernel: rbf",3.07,0.17,0.11,0.98,0.1,0.98,15.01,0.19,-,-,-,-
 SVR,"C: 20, gamma: scale, kernel: linear",3.25,2.33,0.06,0.24,0.05,0.23,15.73,9.69,-,-,-,-
-DecisionTreeRegressor,"max_depth: 1, splitter: random",3.43,2.79,0.02,0.04,0.02,0.04,17.04,12.13,-,lowest of its class,lowest of its class,-
-DecisionTreeRegressor,"max_depth: 1, splitter: best",3.06,2.68,0.17,0.1,0.17,0.1,13.83,11.32,lowest of its class,-,-,lowest of its class
-DecisionTreeRegressor,"max_depth: 5, splitter: random",3.5,2.15,0.03,0.39,0.05,0.39,17.43,7.74,-,-,-,-
-DecisionTreeRegressor,"max_depth: 5, splitter: best",3.36,1.87,0.08,0.52,0.09,0.52,18.06,6.08,-,-,-,-
-DecisionTreeRegressor,"max_depth: 10, splitter: random",3.78,0.58,0.34,0.9,0.36,0.9,22.59,1.21,highest of its class,highest of its class,highest of its class,highest of its class
-DecisionTreeRegressor,"max_depth: 10, splitter: best",3.59,0.31,0.29,0.97,0.29,0.97,21.45,0.43,-,-,-,-
-RandomForestRegressor,"max_depth: 1, n_estimators: 1",3.07,2.69,0.16,0.1,0.16,0.1,13.99,11.34,-,-,-,-
-RandomForestRegressor,"max_depth: 1, n_estimators: 10",3.06,2.65,0.18,0.13,0.17,0.13,13.74,11.02,-,-,-,-
-RandomForestRegressor,"max_depth: 1, n_estimators: 100",3.11,2.65,0.15,0.13,0.15,0.13,14.17,10.96,-,lowest of its class,lowest of its class,-
-RandomForestRegressor,"max_depth: 5, n_estimators: 1",3.67,2.16,0.25,0.35,0.25,0.35,20.85,8.17,-,-,-,-
-RandomForestRegressor,"max_depth: 5, n_estimators: 10",2.96,1.88,0.2,0.56,0.2,0.56,13.38,5.55,-,-,-,-
-RandomForestRegressor,"max_depth: 5, n_estimators: 100",2.95,1.86,0.22,0.57,0.21,0.57,13.07,5.41,-,-,-,-
-RandomForestRegressor,"max_depth: 10, n_estimators: 1",3.72,1.37,0.28,0.47,0.29,0.47,21.39,6.7,highest of its class,highest of its class,highest of its class,highest of its class
-RandomForestRegressor,"max_depth: 10, n_estimators: 10",2.98,1.16,0.2,0.82,0.2,0.82,13.27,2.31,-,-,-,-
-RandomForestRegressor,"max_depth: 10, n_estimators: 100",2.93,1.05,0.22,0.86,0.22,0.86,13.05,1.78,lowest of its class,-,-,lowest of its class
-KNeighborsRegressor,"weights: uniform, n_neighbors: 1",3.79,0.0,0.28,1.0,0.3,1.0,21.68,0.0,highest of its class,highest of its class,highest of its class,highest of its class
-KNeighborsRegressor,"weights: uniform, n_neighbors: 5",3.11,2.14,0.14,0.38,0.12,0.38,14.58,7.83,-,-,-,-
-KNeighborsRegressor,"weights: uniform, n_neighbors: 10",3.17,2.33,0.13,0.3,0.11,0.3,14.86,8.82,-,lowest of its class,lowest of its class,-
-KNeighborsRegressor,"weights: distance, n_neighbors: 1",3.79,0.0,0.28,1.0,0.3,1.0,21.68,0.0,-,-,-,-
-KNeighborsRegressor,"weights: distance, n_neighbors: 5",3.1,0.0,0.15,1.0,0.13,1.0,14.5,0.0,lowest of its class,-,-,lowest of its class
-KNeighborsRegressor,"weights: distance, n_neighbors: 10",3.15,0.0,0.14,1.0,0.12,1.0,14.72,0.0,-,-,-,-
-AdaBoostRegressor,"n_estimators: 1, learning_rate: 0.1",3.66,2.66,0.18,0.11,0.22,0.1,20.3,11.3,highest of its class,highest of its class,highest of its class,highest of its class
-AdaBoostRegressor,"n_estimators: 1, learning_rate: 0.5",3.66,2.66,0.18,0.11,0.22,0.1,20.3,11.3,-,-,-,-
-AdaBoostRegressor,"n_estimators: 1, learning_rate: 1",3.66,2.66,0.18,0.11,0.22,0.1,20.3,11.3,-,-,-,-
-AdaBoostRegressor,"n_estimators: 5, learning_rate: 0.1",3.1,2.33,0.15,0.32,0.15,0.32,14.22,8.61,-,-,-,-
-AdaBoostRegressor,"n_estimators: 5, learning_rate: 0.5",3.16,2.36,0.09,0.32,0.08,0.32,15.32,8.6,-,-,-,-
-AdaBoostRegressor,"n_estimators: 5, learning_rate: 1",3.26,2.36,0.05,0.34,0.05,0.33,15.88,8.41,-,lowest of its class,lowest of its class,-
-AdaBoostRegressor,"n_estimators: 10, learning_rate: 0.1",3.06,2.33,0.17,0.33,0.16,0.33,14.0,8.45,lowest of its class,-,-,-
-AdaBoostRegressor,"n_estimators: 10, learning_rate: 0.5",3.09,2.31,0.16,0.37,0.16,0.37,13.95,7.98,-,-,-,lowest of its class
-AdaBoostRegressor,"n_estimators: 10, learning_rate: 1",3.18,2.34,0.11,0.35,0.11,0.35,14.86,8.16,-,-,-,-
-GaussianProcessRegressor,alpha: 0.5,10.59,3.55,0.0,0.89,6.74,0.11,128.8,14.04,lowest of its class,lowest of its class,lowest of its class,lowest of its class
-GaussianProcessRegressor,alpha: 1,10.6,5.34,0.0,0.75,6.75,1.51,128.88,31.62,highest of its class,-,highest of its class,-
-GaussianProcessRegressor,alpha: 1.5,10.6,6.41,0.0,0.64,6.75,2.61,128.93,45.58,-,-,-,highest of its class
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.0",3.79,0.0,0.38,1.0,0.38,1.0,23.03,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.1",3.3,1.97,0.01,0.54,0.01,0.54,16.72,5.81,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,lowest of its class,lowest of its class,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.0",4.0,0.0,0.62,1.0,0.63,1.0,27.21,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.1",3.37,1.77,0.08,0.6,0.09,0.6,18.08,5.1,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.5",2.85,2.61,0.25,0.16,0.25,0.16,12.54,10.62,lowest of its class,-,-,lowest of its class
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.9",3.06,2.68,0.17,0.1,0.17,0.1,13.83,11.32,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.0",3.79,0.0,0.38,1.0,0.38,1.0,23.03,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.1",3.3,1.97,0.01,0.54,0.01,0.54,16.72,5.81,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.0",4.0,0.0,0.62,1.0,0.63,1.0,27.21,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.1",3.37,1.77,0.08,0.6,0.09,0.6,18.08,5.1,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.5",2.85,2.61,0.25,0.16,0.25,0.16,12.54,10.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.9",3.06,2.68,0.17,0.1,0.17,0.1,13.83,11.32,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.0",3.79,0.0,0.38,1.0,0.38,1.0,23.03,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.1",3.3,1.97,0.01,0.54,0.01,0.54,16.72,5.81,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.0",4.0,0.0,0.62,1.0,0.63,1.0,27.21,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.1",3.37,1.77,0.08,0.6,0.09,0.6,18.08,5.1,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.5",2.85,2.61,0.25,0.16,0.25,0.16,12.54,10.62,-,-,-,-
+DecisionTreeRegressor,"criterion: squared_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.9",3.06,2.68,0.17,0.1,0.17,0.1,13.83,11.32,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: random, min_impurity_decrease: 0.0",4.05,0.0,0.57,1.0,0.59,1.0,26.5,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: random, min_impurity_decrease: 0.1",3.83,0.04,0.42,1.0,0.44,1.0,24.04,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: random, min_impurity_decrease: 0.5",3.84,0.1,0.37,1.0,0.38,1.0,22.92,0.03,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: random, min_impurity_decrease: 0.9",3.86,0.19,0.48,0.99,0.49,0.99,24.77,0.08,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: best, min_impurity_decrease: 0.0",3.75,0.0,0.48,1.0,0.49,1.0,24.77,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: best, min_impurity_decrease: 0.1",3.94,0.04,0.6,1.0,0.63,1.0,27.15,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: best, min_impurity_decrease: 0.5",3.92,0.13,0.63,1.0,0.64,1.0,27.21,0.04,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 100, splitter: best, min_impurity_decrease: 0.9",3.52,0.21,0.35,0.99,0.35,0.99,22.4,0.09,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: random, min_impurity_decrease: 0.0",4.05,0.0,0.57,1.0,0.59,1.0,26.5,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: random, min_impurity_decrease: 0.1",3.83,0.04,0.42,1.0,0.44,1.0,24.04,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: random, min_impurity_decrease: 0.5",3.84,0.1,0.37,1.0,0.38,1.0,22.92,0.03,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: random, min_impurity_decrease: 0.9",3.86,0.19,0.48,0.99,0.49,0.99,24.77,0.08,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: best, min_impurity_decrease: 0.0",3.75,0.0,0.48,1.0,0.49,1.0,24.77,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: best, min_impurity_decrease: 0.1",3.94,0.04,0.6,1.0,0.63,1.0,27.15,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: best, min_impurity_decrease: 0.5",3.92,0.13,0.63,1.0,0.64,1.0,27.21,0.04,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 500, splitter: best, min_impurity_decrease: 0.9",3.52,0.21,0.35,0.99,0.35,0.99,22.4,0.09,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: random, min_impurity_decrease: 0.0",4.05,0.0,0.57,1.0,0.59,1.0,26.5,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: random, min_impurity_decrease: 0.1",3.83,0.04,0.42,1.0,0.44,1.0,24.04,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: random, min_impurity_decrease: 0.5",3.84,0.1,0.37,1.0,0.38,1.0,22.92,0.03,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: random, min_impurity_decrease: 0.9",3.86,0.19,0.48,0.99,0.49,0.99,24.77,0.08,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: best, min_impurity_decrease: 0.0",3.75,0.0,0.48,1.0,0.49,1.0,24.77,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: best, min_impurity_decrease: 0.1",3.94,0.04,0.6,1.0,0.63,1.0,27.15,0.01,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: best, min_impurity_decrease: 0.5",3.92,0.13,0.63,1.0,0.64,1.0,27.21,0.04,-,-,-,-
+DecisionTreeRegressor,"criterion: friedman_mse, max_depth: 1000, splitter: best, min_impurity_decrease: 0.9",3.52,0.21,0.35,0.99,0.35,0.99,22.4,0.09,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.0",3.9,0.0,0.4,1.0,0.41,1.0,23.52,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.1",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: random, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.0",4.09,0.0,0.58,1.0,0.58,1.0,26.37,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.1",3.03,2.68,0.19,0.1,0.19,0.1,13.56,11.35,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 100, splitter: best, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.0",3.9,0.0,0.4,1.0,0.41,1.0,23.52,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.1",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: random, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.0",4.09,0.0,0.58,1.0,0.58,1.0,26.37,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.1",3.03,2.68,0.19,0.1,0.19,0.1,13.56,11.35,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 500, splitter: best, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.0",3.9,0.0,0.4,1.0,0.41,1.0,23.52,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.1",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: random, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.0",4.09,0.0,0.58,1.0,0.58,1.0,26.37,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.1",3.03,2.68,0.19,0.1,0.19,0.1,13.56,11.35,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.5",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: absolute_error, max_depth: 1000, splitter: best, min_impurity_decrease: 0.9",3.31,2.86,0.0,0.0,0.0,0.0,16.64,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: random, min_impurity_decrease: 0.0",4.45,0.0,0.6,1.0,0.76,1.0,29.33,0.0,highest of its class,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: random, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: best, min_impurity_decrease: 0.0",4.42,0.0,0.84,1.0,0.89,1.0,31.46,0.0,-,highest of its class,highest of its class,highest of its class
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: best, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: best, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 100, splitter: best, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: random, min_impurity_decrease: 0.0",4.45,0.0,0.6,1.0,0.76,1.0,29.33,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: random, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: best, min_impurity_decrease: 0.0",4.42,0.0,0.84,1.0,0.89,1.0,31.46,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: best, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: best, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 500, splitter: best, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: random, min_impurity_decrease: 0.0",4.45,0.0,0.6,1.0,0.76,1.0,29.33,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: random, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: random, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: random, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: best, min_impurity_decrease: 0.0",4.42,0.0,0.84,1.0,0.89,1.0,31.46,0.0,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: best, min_impurity_decrease: 0.1",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: best, min_impurity_decrease: 0.5",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+DecisionTreeRegressor,"criterion: poisson, max_depth: 1000, splitter: best, min_impurity_decrease: 0.9",3.32,2.86,0.0,0.0,0.0,0.0,16.65,12.62,-,-,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 50, n_estimators: 100, max_features: auto",2.92,0.92,0.22,0.89,0.22,0.89,12.93,1.43,-,-,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 50, n_estimators: 200, max_features: auto",2.88,0.91,0.23,0.89,0.23,0.89,12.82,1.37,lowest of its class,highest of its class,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 100, n_estimators: 100, max_features: auto",2.92,0.92,0.22,0.89,0.22,0.89,12.93,1.43,-,-,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 100, n_estimators: 200, max_features: auto",2.88,0.91,0.23,0.89,0.23,0.89,12.82,1.37,-,-,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 200, n_estimators: 100, max_features: auto",2.92,0.92,0.22,0.89,0.22,0.89,12.93,1.43,-,-,-,-
+RandomForestRegressor,"criterion: squared_error, max_depth: 200, n_estimators: 200, max_features: auto",2.88,0.91,0.23,0.89,0.23,0.89,12.82,1.37,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 50, n_estimators: 100, max_features: auto",2.91,0.92,0.23,0.89,0.23,0.89,12.88,1.41,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 50, n_estimators: 200, max_features: auto",2.88,0.92,0.23,0.89,0.23,0.89,12.82,1.37,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 100, n_estimators: 100, max_features: auto",2.91,0.92,0.23,0.89,0.23,0.89,12.88,1.41,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 100, n_estimators: 200, max_features: auto",2.88,0.92,0.23,0.89,0.23,0.89,12.82,1.37,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 200, n_estimators: 100, max_features: auto",2.91,0.92,0.23,0.89,0.23,0.89,12.88,1.41,-,-,-,-
+RandomForestRegressor,"criterion: friedman_mse, max_depth: 200, n_estimators: 200, max_features: auto",2.88,0.92,0.23,0.89,0.23,0.89,12.82,1.37,-,-,-,-
+RandomForestRegressor,"criterion: absolute_error, max_depth: 50, n_estimators: 100, max_features: auto",2.92,0.93,0.21,0.88,0.21,0.88,13.13,1.47,-,-,lowest of its class,-
+RandomForestRegressor,"criterion: absolute_error, max_depth: 50, n_estimators: 200, max_features: auto",2.89,0.93,0.23,0.89,0.23,0.89,12.8,1.43,-,-,-,lowest of its class
+RandomForestRegressor,"criterion: absolute_error, max_depth: 100, n_estimators: 100, max_features: auto",2.92,0.93,0.21,0.88,0.21,0.88,13.13,1.47,-,-,-,-
+RandomForestRegressor,"criterion: absolute_error, max_depth: 100, n_estimators: 200, max_features: auto",2.89,0.93,0.23,0.89,0.23,0.89,12.8,1.43,-,-,-,-
+RandomForestRegressor,"criterion: absolute_error, max_depth: 200, n_estimators: 100, max_features: auto",2.92,0.93,0.21,0.88,0.21,0.88,13.13,1.47,-,-,-,-
+RandomForestRegressor,"criterion: absolute_error, max_depth: 200, n_estimators: 200, max_features: auto",2.89,0.93,0.23,0.89,0.23,0.89,12.8,1.43,-,-,-,-
+RandomForestRegressor,"criterion: poisson, max_depth: 50, n_estimators: 100, max_features: auto",3.8,1.11,0.18,0.85,0.29,0.84,21.4,2.04,highest of its class,-,highest of its class,highest of its class
+RandomForestRegressor,"criterion: poisson, max_depth: 50, n_estimators: 200, max_features: auto",3.78,1.1,0.17,0.86,0.27,0.84,21.14,1.98,-,lowest of its class,-,-
+RandomForestRegressor,"criterion: poisson, max_depth: 100, n_estimators: 100, max_features: auto",3.8,1.11,0.18,0.85,0.29,0.84,21.4,2.04,-,-,-,-
+RandomForestRegressor,"criterion: poisson, max_depth: 100, n_estimators: 200, max_features: auto",3.78,1.1,0.17,0.86,0.27,0.84,21.14,1.98,-,-,-,-
+RandomForestRegressor,"criterion: poisson, max_depth: 200, n_estimators: 100, max_features: auto",3.8,1.11,0.18,0.85,0.29,0.84,21.4,2.04,-,-,-,-
+RandomForestRegressor,"criterion: poisson, max_depth: 200, n_estimators: 200, max_features: auto",3.78,1.1,0.17,0.86,0.27,0.84,21.14,1.98,-,-,-,-
+KNeighborsRegressor,"weights: uniform, algorithm: auto, n_neighbors: 50",3.16,2.62,0.11,0.17,0.09,0.15,15.21,10.7,-,highest of its class,highest of its class,-
+KNeighborsRegressor,"weights: uniform, algorithm: auto, n_neighbors: 100",3.22,2.72,0.07,0.11,0.06,0.09,15.71,11.45,-,-,-,-
+KNeighborsRegressor,"weights: uniform, algorithm: auto, n_neighbors: 200",3.28,2.81,0.04,0.04,0.03,0.04,16.12,12.16,highest of its class,lowest of its class,lowest of its class,highest of its class
+KNeighborsRegressor,"weights: uniform, algorithm: ball_tree, n_neighbors: 50",3.16,2.62,0.11,0.17,0.09,0.15,15.21,10.7,-,-,-,-
+KNeighborsRegressor,"weights: uniform, algorithm: ball_tree, n_neighbors: 100",3.22,2.72,0.07,0.11,0.06,0.09,15.71,11.45,-,-,-,-
+KNeighborsRegressor,"weights: uniform, algorithm: ball_tree, n_neighbors: 200",3.28,2.81,0.04,0.04,0.03,0.04,16.12,12.16,-,-,-,-
+KNeighborsRegressor,"weights: distance, algorithm: auto, n_neighbors: 50",3.15,0.0,0.11,1.0,0.09,1.0,15.12,0.0,lowest of its class,-,-,lowest of its class
+KNeighborsRegressor,"weights: distance, algorithm: auto, n_neighbors: 100",3.21,0.0,0.08,1.0,0.06,1.0,15.61,0.0,-,-,-,-
+KNeighborsRegressor,"weights: distance, algorithm: auto, n_neighbors: 200",3.27,0.0,0.05,1.0,0.04,1.0,16.01,0.0,-,-,-,-
+KNeighborsRegressor,"weights: distance, algorithm: ball_tree, n_neighbors: 50",3.15,0.0,0.11,1.0,0.09,1.0,15.12,0.0,-,-,-,-
+KNeighborsRegressor,"weights: distance, algorithm: ball_tree, n_neighbors: 100",3.21,0.0,0.08,1.0,0.06,1.0,15.61,0.0,-,-,-,-
+KNeighborsRegressor,"weights: distance, algorithm: ball_tree, n_neighbors: 200",3.27,0.0,0.05,1.0,0.04,1.0,16.01,0.0,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.1, loss: linear",3.09,2.26,0.16,0.39,0.15,0.39,14.1,7.64,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.1, loss: square",3.09,2.27,0.15,0.41,0.15,0.4,14.15,7.52,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.1, loss: exponential",3.03,2.31,0.19,0.36,0.19,0.36,13.54,8.05,lowest of its class,highest of its class,highest of its class,lowest of its class
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.5, loss: linear",3.1,2.16,0.15,0.48,0.14,0.48,14.33,6.6,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.5, loss: square",3.09,2.16,0.13,0.49,0.12,0.49,14.57,6.39,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.5, loss: exponential",3.07,2.21,0.15,0.46,0.15,0.46,14.19,6.77,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.9, loss: linear",3.15,2.17,0.09,0.5,0.09,0.5,15.15,6.35,highest of its class,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.9, loss: square",3.08,2.1,0.09,0.53,0.08,0.53,15.26,5.95,-,-,-,-
+AdaBoostRegressor,"n_estimators: 50, learning_rate: 0.9, loss: exponential",3.08,2.14,0.11,0.51,0.11,0.5,14.87,6.27,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.1, loss: linear",3.07,2.27,0.15,0.42,0.15,0.42,14.11,7.34,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.1, loss: square",3.09,2.22,0.15,0.46,0.15,0.46,14.2,6.87,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.1, loss: exponential",3.05,2.27,0.18,0.41,0.18,0.41,13.65,7.47,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.5, loss: linear",3.12,2.1,0.11,0.53,0.11,0.53,14.83,5.95,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.5, loss: square",3.06,2.07,0.13,0.53,0.13,0.53,14.54,5.9,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.5, loss: exponential",3.08,2.18,0.14,0.5,0.14,0.5,14.39,6.37,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.9, loss: linear",3.1,2.08,0.11,0.54,0.11,0.54,14.87,5.77,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.9, loss: square",3.07,2.08,0.1,0.54,0.1,0.53,15.0,5.87,-,-,-,-
+AdaBoostRegressor,"n_estimators: 100, learning_rate: 0.9, loss: exponential",3.1,2.13,0.11,0.52,0.11,0.51,14.88,6.13,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.1, loss: linear",3.1,2.2,0.14,0.46,0.14,0.46,14.38,6.79,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.1, loss: square",3.12,2.16,0.12,0.5,0.12,0.5,14.6,6.37,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.1, loss: exponential",3.08,2.2,0.14,0.46,0.14,0.46,14.26,6.82,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.5, loss: linear",3.12,2.1,0.1,0.53,0.1,0.53,14.99,5.88,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.5, loss: square",3.13,2.07,0.09,0.54,0.09,0.54,15.19,5.8,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.5, loss: exponential",3.08,2.15,0.11,0.51,0.11,0.51,14.83,6.17,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.9, loss: linear",3.08,2.07,0.11,0.55,0.11,0.55,14.79,5.63,-,-,-,-
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.9, loss: square",3.11,2.05,0.06,0.55,0.05,0.55,15.75,5.63,-,lowest of its class,lowest of its class,highest of its class
+AdaBoostRegressor,"n_estimators: 200, learning_rate: 0.9, loss: exponential",3.12,2.11,0.09,0.54,0.09,0.53,15.09,5.89,-,-,-,-
+GaussianProcessRegressor,alpha: 1e-10,10.58,0.0,0.0,1.0,6.73,1.0,128.64,0.0,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+GaussianProcessRegressor,alpha: 1e-05,10.58,0.0,0.0,1.0,6.73,1.0,128.64,0.0,-,-,-,-
+GaussianProcessRegressor,alpha: 0.001,10.58,0.01,0.0,1.0,6.73,1.0,128.64,0.0,-,-,-,-
 MLPRegressor,"hidden_layer_sizes: 50, max_iter: 100",3.75,2.89,0.06,0.32,0.22,0.0,20.28,12.63,highest of its class,-,highest of its class,highest of its class
 MLPRegressor,"hidden_layer_sizes: 50, max_iter: 200",3.32,1.93,0.04,0.54,0.04,0.53,16.05,5.87,-,-,-,-
 MLPRegressor,"hidden_layer_sizes: 50, max_iter: 300",3.29,1.63,0.07,0.66,0.06,0.66,15.58,4.3,-,-,-,-
