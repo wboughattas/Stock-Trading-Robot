@@ -1,0 +1,6 @@
+/.git
+/.idea
+python
+__pycache__/
+*.py[cod]
+*$py.class

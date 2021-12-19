@@ -1,0 +1,77 @@
+model,params,mean_test_mean_absolute_error,mean_train_mean_absolute_error,mean_test_explained_variance_score,mean_train_explained_variance_score,mean_test_r2_score,mean_train_r2_score,mean_test_mean_squared_error,mean_train_mean_squared_error,ranking_test_ranking_absolute_error,ranking_test_explained_variance_score,ranking_test_r2_score,ranking_test_ranking_squared_error
+LinearRegression,fit_intercept: True,165.02,174.47,0.06,0.04,0.0,0.04,61217.02,165127.35,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+LinearRegression,fit_intercept: False,165.02,174.47,0.06,0.04,0.0,0.04,61217.02,165127.35,-,-,-,-
+SVR,"C: 1, gamma: auto, kernel: rbf",123.59,150.15,0.01,0.0,0.04,0.05,64202.49,180062.89,-,lowest of its class,highest of its class,highest of its class
+SVR,"C: 1, gamma: auto, kernel: linear",122.37,147.23,0.05,0.02,0.0,0.04,61311.39,177649.24,-,-,lowest of its class,-
+SVR,"C: 1, gamma: scale, kernel: rbf",123.59,150.15,0.01,0.0,0.04,0.05,64202.49,180062.89,-,-,-,-
+SVR,"C: 1, gamma: scale, kernel: linear",122.37,147.23,0.05,0.02,0.0,0.04,61311.39,177649.24,-,-,-,-
+SVR,"C: 10, gamma: auto, kernel: rbf",119.94,143.19,0.05,0.03,0.01,0.02,60879.05,175762.53,-,-,-,-
+SVR,"C: 10, gamma: auto, kernel: linear",124.98,146.68,0.05,0.02,0.02,0.03,60135.49,175889.7,highest of its class,-,-,-
+SVR,"C: 10, gamma: scale, kernel: rbf",119.94,143.19,0.05,0.03,0.01,0.02,60879.05,175762.53,-,-,-,-
+SVR,"C: 10, gamma: scale, kernel: linear",124.98,146.68,0.05,0.02,0.02,0.03,60135.49,175889.7,-,-,-,-
+SVR,"C: 20, gamma: auto, kernel: rbf",119.67,140.4,0.07,0.03,0.02,0.02,59975.31,174354.86,lowest of its class,highest of its class,-,-
+SVR,"C: 20, gamma: auto, kernel: linear",124.47,146.67,0.06,0.02,0.03,0.02,59797.28,175641.26,-,-,-,lowest of its class
+SVR,"C: 20, gamma: scale, kernel: rbf",119.67,140.4,0.07,0.03,0.02,0.02,59975.31,174354.86,-,-,-,-
+SVR,"C: 20, gamma: scale, kernel: linear",124.47,146.67,0.06,0.02,0.03,0.02,59797.28,175641.26,-,-,-,-
+DecisionTreeRegressor,"max_depth: 5, splitter: random",148.94,159.17,0.02,0.23,0.04,0.23,63742.57,132199.75,-,lowest of its class,lowest of its class,-
+DecisionTreeRegressor,"max_depth: 5, splitter: best",146.66,125.64,0.06,0.69,0.06,0.69,57958.08,54012.53,lowest of its class,-,-,lowest of its class
+DecisionTreeRegressor,"max_depth: 10, splitter: random",200.74,32.14,0.91,0.94,0.95,0.94,119846.33,11071.44,-,-,-,-
+DecisionTreeRegressor,"max_depth: 10, splitter: best",202.42,18.3,1.74,0.98,1.77,0.98,170542.74,2722.91,-,-,-,-
+DecisionTreeRegressor,"max_depth: 100, splitter: random",217.62,0.48,1.83,1.0,1.86,1.0,176047.26,20.53,highest of its class,highest of its class,highest of its class,highest of its class
+DecisionTreeRegressor,"max_depth: 100, splitter: best",209.22,0.48,1.59,1.0,1.65,1.0,162692.06,20.53,-,-,-,-
+DecisionTreeRegressor,"max_depth: 200, splitter: random",217.62,0.48,1.83,1.0,1.86,1.0,176047.26,20.53,-,-,-,-
+DecisionTreeRegressor,"max_depth: 200, splitter: best",209.22,0.48,1.59,1.0,1.65,1.0,162692.06,20.53,-,-,-,-
+RandomForestRegressor,"max_depth: 1, n_estimators: 1",187.44,184.52,0.09,0.0,0.17,0.0,72218.6,171637.56,-,-,-,-
+RandomForestRegressor,"max_depth: 1, n_estimators: 10",160.93,177.27,0.06,0.03,0.01,0.03,60980.26,166372.48,-,-,lowest of its class,-
+RandomForestRegressor,"max_depth: 1, n_estimators: 100",157.67,173.38,0.05,0.03,0.02,0.03,60572.55,166882.97,-,lowest of its class,-,-
+RandomForestRegressor,"max_depth: 1, n_estimators: 150",156.56,172.51,0.05,0.03,0.02,0.03,60421.36,167036.69,lowest of its class,-,-,lowest of its class
+RandomForestRegressor,"max_depth: 1, n_estimators: 200",157.64,173.03,0.05,0.03,0.01,0.03,60611.59,167052.94,-,-,-,-
+RandomForestRegressor,"max_depth: 5, n_estimators: 1",320.99,153.51,14.96,0.04,15.51,0.04,1015318.33,164914.36,-,-,-,-
+RandomForestRegressor,"max_depth: 5, n_estimators: 10",182.97,127.52,0.74,0.72,0.82,0.72,111841.37,48313.75,-,-,-,-
+RandomForestRegressor,"max_depth: 5, n_estimators: 100",179.44,128.69,0.5,0.66,0.57,0.66,96375.18,58513.84,-,-,-,-
+RandomForestRegressor,"max_depth: 5, n_estimators: 150",177.07,129.19,0.33,0.64,0.4,0.64,86007.7,61183.38,-,-,-,-
+RandomForestRegressor,"max_depth: 5, n_estimators: 200",179.54,129.54,0.39,0.65,0.46,0.65,90063.56,60741.32,-,-,-,-
+RandomForestRegressor,"max_depth: 10, n_estimators: 1",354.38,100.65,15.59,0.05,16.24,0.04,1060012.66,163863.26,highest of its class,-,highest of its class,highest of its class
+RandomForestRegressor,"max_depth: 10, n_estimators: 10",218.12,73.32,1.28,0.91,1.45,0.91,150403.27,16251.45,-,-,-,-
+RandomForestRegressor,"max_depth: 10, n_estimators: 100",202.97,77.78,0.69,0.85,0.81,0.85,111502.65,26162.51,-,-,-,-
+RandomForestRegressor,"max_depth: 10, n_estimators: 150",200.26,78.65,0.49,0.84,0.62,0.84,99626.98,27600.06,-,-,-,-
+RandomForestRegressor,"max_depth: 10, n_estimators: 200",200.67,79.24,0.54,0.84,0.67,0.84,102790.25,27264.61,-,-,-,-
+RandomForestRegressor,"max_depth: 15, n_estimators: 1",349.36,108.89,15.62,0.04,16.22,0.05,1058838.14,180176.5,-,highest of its class,-,-
+RandomForestRegressor,"max_depth: 15, n_estimators: 10",206.35,71.97,0.81,0.9,0.93,0.9,118986.96,16707.46,-,-,-,-
+RandomForestRegressor,"max_depth: 15, n_estimators: 100",199.75,72.64,0.57,0.86,0.69,0.86,104173.09,24709.26,-,-,-,-
+RandomForestRegressor,"max_depth: 15, n_estimators: 150",198.23,72.92,0.42,0.85,0.55,0.85,95055.91,26244.46,-,-,-,-
+RandomForestRegressor,"max_depth: 15, n_estimators: 200",200.15,73.43,0.49,0.85,0.62,0.85,99798.94,25759.96,-,-,-,-
+RandomForestRegressor,"max_depth: 20, n_estimators: 1",341.86,111.41,15.4,0.1,15.93,0.11,1041452.56,189818.48,-,-,-,-
+RandomForestRegressor,"max_depth: 20, n_estimators: 10",206.17,70.64,0.84,0.91,0.96,0.91,120520.55,15866.56,-,-,-,-
+RandomForestRegressor,"max_depth: 20, n_estimators: 100",200.75,72.02,0.64,0.86,0.76,0.86,108411.63,24556.4,-,-,-,-
+RandomForestRegressor,"max_depth: 20, n_estimators: 150",198.32,72.46,0.47,0.85,0.59,0.85,97568.95,26126.43,-,-,-,-
+RandomForestRegressor,"max_depth: 20, n_estimators: 200",200.5,72.97,0.54,0.85,0.67,0.85,102738.46,25721.27,-,-,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 1",206.77,0.48,1.26,1.0,1.29,1.0,140645.01,41.06,highest of its class,-,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 2",205.06,118.05,1.33,0.39,1.42,0.39,148947.98,104092.92,-,highest of its class,highest of its class,highest of its class
+KNeighborsRegressor,"weights: uniform, n_neighbors: 3",198.9,142.88,1.14,0.26,1.25,0.26,138357.3,126896.5,-,-,-,-
+KNeighborsRegressor,"weights: uniform, n_neighbors: 4",191.96,149.08,0.89,0.26,0.98,0.26,121480.7,126323.06,-,-,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 1",206.77,0.48,1.26,1.0,1.29,1.0,140645.01,41.06,-,-,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 2",199.63,0.48,1.01,1.0,1.07,1.0,127564.25,20.53,-,-,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 3",195.9,0.48,0.98,1.0,1.07,1.0,127065.65,20.53,-,-,-,-
+KNeighborsRegressor,"weights: distance, n_neighbors: 4",190.25,0.48,0.79,1.0,0.87,1.0,115022.09,20.53,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+AdaBoostRegressor,"n_estimators: 1, learning_rate: 0.1",173.83,199.64,0.13,0.07,0.19,0.06,72891.1,160428.56,-,-,-,-
+AdaBoostRegressor,"n_estimators: 1, learning_rate: 0.5",173.83,199.64,0.13,0.07,0.19,0.06,72891.1,160428.56,-,-,-,-
+AdaBoostRegressor,"n_estimators: 1, learning_rate: 1",173.83,199.64,0.13,0.07,0.19,0.06,72891.1,160428.56,-,-,-,-
+AdaBoostRegressor,"n_estimators: 5, learning_rate: 0.1",136.53,161.15,0.1,0.08,0.1,0.07,55584.37,158734.53,lowest of its class,-,-,lowest of its class
+AdaBoostRegressor,"n_estimators: 5, learning_rate: 0.5",188.11,178.21,0.45,0.47,0.57,0.46,96345.16,92690.42,-,highest of its class,highest of its class,highest of its class
+AdaBoostRegressor,"n_estimators: 5, learning_rate: 1",169.87,175.17,0.05,0.59,0.11,0.57,68572.37,73074.62,-,-,-,-
+AdaBoostRegressor,"n_estimators: 10, learning_rate: 0.1",144.07,160.33,0.11,0.32,0.09,0.32,55917.48,116135.16,-,-,lowest of its class,-
+AdaBoostRegressor,"n_estimators: 10, learning_rate: 0.5",178.09,183.33,0.02,0.6,0.12,0.58,69094.78,71925.62,-,-,-,-
+AdaBoostRegressor,"n_estimators: 10, learning_rate: 1",191.4,184.71,0.01,0.62,0.15,0.59,70767.38,69496.44,highest of its class,lowest of its class,-,-
+GaussianProcessRegressor,alpha: 0.5,173.95,126.88,0.36,0.45,0.37,0.44,84437.96,95280.24,highest of its class,highest of its class,highest of its class,highest of its class
+GaussianProcessRegressor,alpha: 1,160.61,136.57,0.26,0.36,0.26,0.36,77479.98,109795.95,-,-,-,-
+GaussianProcessRegressor,alpha: 1.5,155.14,140.92,0.21,0.32,0.21,0.31,74318.52,118039.63,lowest of its class,lowest of its class,lowest of its class,lowest of its class
+MLPRegressor,"hidden_layer_sizes: 50, max_iter: 100",178.43,215.92,0.0,0.0,0.51,0.27,92944.58,217970.18,highest of its class,lowest of its class,highest of its class,highest of its class
+MLPRegressor,"hidden_layer_sizes: 50, max_iter: 200",164.63,201.76,0.02,0.0,0.41,0.23,86929.86,211181.33,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 50, max_iter: 300",143.69,179.72,0.04,0.01,0.26,0.17,77698.8,200350.99,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 100, max_iter: 100",171.82,209.55,0.01,0.0,0.47,0.25,90279.76,214882.91,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 100, max_iter: 200",141.67,178.23,0.03,0.01,0.25,0.16,77139.13,199542.52,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 100, max_iter: 300",126.0,154.42,0.05,0.02,0.04,0.06,64102.01,182110.7,lowest of its class,highest of its class,-,-
+MLPRegressor,"hidden_layer_sizes: 150, max_iter: 100",166.8,204.41,0.01,0.0,0.43,0.24,88048.76,212276.34,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 150, max_iter: 200",132.1,165.57,0.04,0.02,0.15,0.12,70987.41,191402.29,-,-,-,-
+MLPRegressor,"hidden_layer_sizes: 150, max_iter: 300",132.15,153.08,0.05,0.03,0.02,0.01,60084.69,173612.27,-,-,lowest of its class,lowest of its class
