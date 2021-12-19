@@ -1,61 +1,54 @@
 from Models import *
 
 sgemm_gpu_params = {
-    'linear_regression': {
+    'LinearRegression': {
         'model': LinearRegression(),
         'params': {
-            'fit_intercept': ['True', 'False']
+            'fit_intercept': ['True']
         }
     },
-    'svr': {
+    'SVR': {
         'model': SVR(),
         'params': {
-            'C': [1, 10, 20],
-            'gamma': ['auto', 'scale'],
-            'kernel': ['rbf', 'linear']
+            'C': [1],
+            'gamma': ['auto'],
+            'kernel': ['rbf']
         }
     },
-    'decision_tree': {
+    'DecisionTreeRegressor': {
         'model': DecisionTreeRegressor(random_state=0),
         'params': {
-            'max_depth': [1, 5, 10],
-            'splitter': ['random', 'best'],
+            'max_depth': [1],
+            'splitter': ['best'],
 
         }
     },
-    'random_forest': {
+    'RandomForestRegressor': {
         'model': RandomForestRegressor(random_state=0),
         'params': {
-            'max_depth': [1, 5, 10],
-            'n_estimators': [1, 10, 100]
+            'max_depth': [5],
+            'n_estimators': [10]
         }
     },
-    'K_means': {
+    'KNeighborsRegressor': {
         'model': KNeighborsRegressor(),
         'params': {
-            'weights': ['uniform', 'distance'],
-            'n_neighbors': [1, 5, 10]
+            'weights': ['uniform'],
+            'n_neighbors': [2]
         }
     },
-    'adaBoost': {
+    'AdaBoostRegressor': {
         'model': AdaBoostRegressor(random_state=0),
         'params': {
-            'n_estimators': [1, 5, 10],
-            'learning_rate': [0.1, 0.5, 1]
+            'n_estimators': [5],
+            'learning_rate': [0.1]
         }
     },
-    'GaussianNB': {
-        'model': GaussianProcessRegressor(),
-        'params': {
-            'alpha': [0.5, 1, 1.5]
-        }
-    },
-    'neural_network': {
+    'MLPRegressor': {
         'model': MLPRegressor(random_state=0),
         'params': {
-            'hidden_layer_sizes': [50, 100, 150],
-            'max_iter': [100, 200, 300],
-
+            'hidden_layer_sizes': [10],
+            'max_iter': [100],
         }
     }
 }

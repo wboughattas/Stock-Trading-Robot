@@ -1,7 +1,7 @@
 from Models import *
 
 breast_cancer_params = {
-    'logistic_regression': {
+    'LogisticRegression': {
         'model': LogisticRegression(random_state=0, max_iter=10000),
         'params': {
             'fit_intercept': [False, True],
@@ -9,7 +9,7 @@ breast_cancer_params = {
             'C': [1.0, 2.5]
         }
     },
-    'svm': {
+    'SVC': {
         'model': SVC(random_state=0),
         'params': {
             'C': [0.5, 1, 10, 20],
@@ -17,7 +17,7 @@ breast_cancer_params = {
             'max_iter': [1, 100, 10000]
         }
     },
-    'decision_tree': {
+    'DecisionTreeClassifier': {
         'model': DecisionTreeClassifier(random_state=0),
         'params': {
             'max_depth': [1, 5, 20],
@@ -25,7 +25,7 @@ breast_cancer_params = {
             'criterion': ['gini', 'entropy']
         }
     },
-    'random_forest': {
+    'RandomForestClassifier': {
         'model': RandomForestClassifier(random_state=0),
         'params': {
             'max_depth': [4, 9, 12],
@@ -33,17 +33,17 @@ breast_cancer_params = {
             'criterion': ['gini', 'entropy']
         }
     },
-    'K_means': {
+    'KNeighborsClassifier': {
         'model': KNeighborsClassifier(),
         'params': {
             'n_neighbors': [10, 200, 500]
         }
     },
-    'adaBoost': {
+    'AdaBoostClassifier': {
         'model': AdaBoostClassifier(random_state=0),
         'params': {
             'algorithm': ['SAMME.R', 'SAMME'],
-            'n_estimators': [3, 4, 5, 6, 7, 8],
+            'n_estimators': [3, 8],
             'learning_rate': [0.1, 0.5, 1]
         }
     },
@@ -53,7 +53,7 @@ breast_cancer_params = {
             'var_smoothing': [1e-09, 1e-05, 0.1]
         }
     },
-    'neural_network': {
+    'MLPClassifier': {
         'model': MLPClassifier(random_state=0, solver='sgd', momentum=0.9, verbose=True, batch_size=100),
         'params': {
             'max_iter': [100, 1000],

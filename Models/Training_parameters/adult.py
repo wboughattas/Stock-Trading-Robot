@@ -1,7 +1,7 @@
 from Models import *
 
 adult_params = {
-    'logistic_regression': {
+    'LogisticRegression': {
         'model': LogisticRegression(random_state=0, max_iter=10000),
         'params': {
             'fit_intercept': [False, True],
@@ -9,16 +9,15 @@ adult_params = {
             'C': [0.001, 1.0, 2.5]
         }
     },
-    'svm': {
+    'SVC': {
         'model': SVC(random_state=0),
         'params': {
-            'C': [0.5, 1, 10, 20, 114],
+            'C': [0.5, 1, 10, 20],
             'kernel': ['rbf', 'linear', 'poly'],
-            'max_iter': [1, 100, 10000],
-            'gamma': [0.001]
+            'max_iter': [1, 100, 10000]
         }
     },
-    'decision_tree': {
+    'DecisionTreeClassifier': {
         'model': DecisionTreeClassifier(random_state=0),
         'params': {
             'max_depth': [1, 5, 11, 20],
@@ -26,7 +25,7 @@ adult_params = {
             'criterion': ['gini', 'entropy']
         }
     },
-    'random_forest': {
+    'RandomForestClassifier': {
         'model': RandomForestClassifier(random_state=0),
         'params': {
             'max_depth': [4, 9, 12, 15],
@@ -34,13 +33,13 @@ adult_params = {
             'criterion': ['gini', 'entropy']
         }
     },
-    'K_means': {
+    'KNeighborsClassifier': {
         'model': KNeighborsClassifier(),
         'params': {
-            'n_neighbors': [10, 27, 200, 500]
+            'n_neighbors': [2, 10, 27, 200, 500]
         }
     },
-    'adaBoost': {
+    'AdaBoostClassifier': {
         'model': AdaBoostClassifier(random_state=0),
         'params': {
             'algorithm': ['SAMME.R', 'SAMME'],
@@ -54,13 +53,12 @@ adult_params = {
             'var_smoothing': [1e-09, 1e-05, 0.1]
         }
     },
-    'neural_network': {
+    'MLPClassifier': {
         'model': MLPClassifier(random_state=0, solver='sgd', momentum=0.9, verbose=True, batch_size=100),
         'params': {
-            'max_iter': [100, 1000, 1159],
+            'max_iter': [100, 1000],
             'activation': ['relu', 'tanh'],
-            'learning_rate_init': [0.001, 0.01],
-            'hidden_layer_sizes': [100, 923]
+            'learning_rate_init': [0.001, 0.01]
         }
     }
 }

@@ -1,16 +1,16 @@
 from Models import *
 
 thoracic_surgery_params = {
-    'logistic_regression': {
-        'model': LogisticRegression(random_state=0, max_iter=10000),
+    'LogisticRegression': {
+        'model': LogisticRegression(random_state=0),
         'params': {
             'fit_intercept': [False, True],
             'penalty': ['none', 'l2'],
-            'max_iter': [1000, 10000],
-            'C': [1.0, 2.5]
+            'C': [10, 50],
+            'solver': ['newton-cg', 'lbfgs', 'sag', 'saga']
         }
     },
-    'svm': {
+    'SVC': {
         'model': SVC(random_state=0),
         'params': {
             'C': [0.5, 1, 10, 20],
@@ -18,43 +18,47 @@ thoracic_surgery_params = {
             'max_iter': [1, 100, 10000]
         }
     },
-    'decision_tree': {
+    'DecisionTreeClassifier': {
         'model': DecisionTreeClassifier(random_state=0),
         'params': {
-            'max_depth': [1, 5, 20],
+            'max_depth': [10, 100, 1000],
             'splitter': ['random', 'best'],
-            'criterion': ['gini', 'entropy']
+            'criterion': ['gini', 'entropy'],
+            'max_features': ['auto', 'sqrt', 'log2']
         }
     },
-    'random_forest': {
+    'RandomForestClassifier': {
         'model': RandomForestClassifier(random_state=0),
         'params': {
-            'max_depth': [4, 9, 12],
-            'n_estimators': [3, 100, 500],
-            'criterion': ['gini', 'entropy']
+            'max_depth': [50, 100, 200],
+            'n_estimators': [50, 100, 200],
+            'criterion': ['gini', 'entropy'],
+            'max_features': ['auto']
         }
     },
-    'K_means': {
+    'KNeighborsClassifier': {
         'model': KNeighborsClassifier(),
         'params': {
-            'n_neighbors': [10, 200]
+            'n_neighbors': [50, 100, 200],
+            'weights': ['uniform', 'distance'],
+            'algorithm': ['auto', 'ball_tree', 'kd_tree'],
         }
     },
-    'adaBoost': {
+    'AdaBoostClassifier': {
         'model': AdaBoostClassifier(random_state=0),
         'params': {
             'algorithm': ['SAMME.R', 'SAMME'],
-            'n_estimators': [3, 4, 5 ,6, 7, 8],
-            'learning_rate': [0.1, 0.5, 1]
+            'n_estimators': [50, 100, 200],
+            'learning_rate': [0.1, 0.5, 0.9]
         }
     },
     'GaussianNB': {
         'model': GaussianNB(),
         'params': {
-            'var_smoothing': [1e-09, 1e-05, 0.1]
+            'var_smoothing': [1e-9, 0.00001, 0.001]
         }
     },
-    'neural_network': {
+    'MLPClassifier': {
         'model': MLPClassifier(random_state=0, solver='sgd', momentum=0.9, verbose=True, batch_size=100),
         'params': {
             'max_iter': [100, 1000],
@@ -63,3 +67,4 @@ thoracic_surgery_params = {
         }
     }
 }
+

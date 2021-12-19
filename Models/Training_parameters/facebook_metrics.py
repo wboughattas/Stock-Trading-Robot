@@ -1,13 +1,13 @@
 from Models import *
 
 facebook_metrics_params = {
-    'linear_regression': {
+    'LinearRegression': {
         'model': LinearRegression(),
         'params': {
             'fit_intercept': ['True', 'False']
         }
     },
-    'svr': {
+    'SVR': {
         'model': SVR(),
         'params': {
             'C': [1, 10, 20],
@@ -15,47 +15,51 @@ facebook_metrics_params = {
             'kernel': ['rbf', 'linear']
         }
     },
-    'decision_tree': {
+    'DecisionTreeRegressor': {
         'model': DecisionTreeRegressor(random_state=0),
         'params': {
-            'max_depth': [5, 10, 100, 200],
+            'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+            'max_depth': [100, 500, 1000],
             'splitter': ['random', 'best'],
-
+            'min_impurity_decrease': [0., 0.1, 0.5, 0.9]
         }
     },
-    'random_forest': {
+    'RandomForestRegressor': {
         'model': RandomForestRegressor(random_state=0),
         'params': {
-            'max_depth': [1, 5, 10, 15, 20],
-            'n_estimators': [1, 10, 100, 150, 200]
+            'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+            'max_depth': [50, 100, 200],
+            'n_estimators': [100, 200],
+            'max_features': ['auto']
         }
     },
-    'K_means': {
+    'KNeighborsRegressor': {
         'model': KNeighborsRegressor(),
         'params': {
             'weights': ['uniform', 'distance'],
-            'n_neighbors': [1, 2, 3, 4]
+            'algorithm': ['auto', 'ball_tree'],
+            'n_neighbors': [50, 100, 200]
         }
     },
-    'adaBoost': {
+    'AdaBoostRegressor': {
         'model': AdaBoostRegressor(random_state=0),
         'params': {
-            'n_estimators': [1, 5, 10],
-            'learning_rate': [0.1, 0.5, 1]
+            'n_estimators': [50, 100, 200],
+            'learning_rate': [0.1, 0.5, 0.9],
+            'loss': ['linear', 'square', 'exponential']
         }
     },
-    'GaussianNB': {
+    'GaussianProcessRegressor': {
         'model': GaussianProcessRegressor(),
         'params': {
-            'alpha': [0.5, 1, 1.5]
+            'alpha': [1e-10, 0.00001, 0.001],
         }
     },
-    'neural_network': {
+    'MLPRegressor': {
         'model': MLPRegressor(random_state=0),
         'params': {
             'hidden_layer_sizes': [50, 100, 150],
             'max_iter': [100, 200, 300],
-
         }
     }
 }

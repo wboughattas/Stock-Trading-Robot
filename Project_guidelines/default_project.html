@@ -1,0 +1,495 @@
+<!DOCTYPE html><html><head>
+      <title>Default Project COMP 432 Fall 2021</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      @import url('https://rsms.me/inter/inter.css');
+/**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  font-family: 'Inter';
+  font-size: 14px;
+  /*ul {
+    Margin-top: -0.8em;
+    Margin-bottom: 0.2em;
+  }
+
+  ol {
+    Margin-top: -0.8em;
+    Margin-bottom: 0.2em;
+  }*/
+}
+.markdown-preview.markdown-preview .center {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview blockquote {
+  color: #888;
+  background: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview blockquote strong {
+  color: #666;
+}
+.answer {
+  padding: 0.1em 3em 1em 3em;
+  color: #00d;
+}
+.hide-answers .answer {
+  visibility: hidden;
+}
+@media screen and (min-width: 790px) {
+  html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+    padding: 2em calc(50% - 395px + 2em);
+  }
+}
+@media screen and (max-width: 790px) {
+  html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+    padding: 2em 2em;
+  }
+}
+.preview-container .mume[for="preview"] {
+  padding: 2em calc(50% - 395px + 2em) !important;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1>
+Default Project &#xA0;<span style="color:#aaa">COMP 432</span>
+</h1>
+<p>This project is designed to give students experience in the following aspects of applied machine learning:</p>
+<ul>
+<li>collecting data sets that are given in diverse formats;</li>
+<li>preparing data sets for training and testing;</li>
+<li>training many types of classification and regression models;</li>
+<li>performing hyperparameter search to give each model its &quot;best shot&quot;;</li>
+<li>aggregating classification and regression performance across datasets;</li>
+<li>plotting performance summaries;</li>
+<li>interpreting how trained models work; and</li>
+<li>writing about machine learning concepts, experiments, and results.</li>
+</ul>
+<p>The specifics of these skills are not spelled out in the project guidelines, but rather something you should acquire by drawing upon lectures, labs, papers, lots of practice, and feedback from course staff.</p>
+<h1 class="mume-header" id="overview">Overview</h1>
+
+<p>Default projects have four components:</p>
+<ol>
+<li>Compare classification methods (tabular datasets) and decide what&apos;s best overall</li>
+<li>Compare regression methods (tabular datasets) and decide what&apos;s best overall</li>
+<li>Compare visualization methods (image data) and decide what works</li>
+<li>Novelty component (your choice)</li>
+</ol>
+<p>Default projects <strong>do not</strong> need a proposal, but they <strong>do</strong> need to a short presentation.</p>
+<p>Be prepared to invest a significant time in understanding and processing the datasets. Not all are described very clearly, but that is often the reality of machine learning. Half the work is understanding the data!</p>
+<h2 class="mume-header" id="1-classification">1. Classification</h2>
+
+<p>Compare the performance of 8 classifiers across 8 classification datasets.</p>
+<h3 class="mume-header" id="classification-models">Classification models</h3>
+
+<p>You should evaluate the following 8 classification models:</p>
+<ol>
+<li>Logistic regression (for classification)</li>
+<li>Support vector classification</li>
+<li>Decision tree classification</li>
+<li>Random forest classification</li>
+<li><em>k</em>-nearest neighbours classification</li>
+<li>AdaBoost classification</li>
+<li>Gaussian naive Bayes classification</li>
+<li>Neural network classification</li>
+</ol>
+<p>Each is provided by scikit-learn under a unified interface. For example, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">MLPClassifier</a> implements a fully-connected neural network classifier (also called a multi-layer perceptron, or MLP), and <a href="https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html">GaussianNB</a> implements a Gaussian naive Bayes classifier. The <a href="https://scikit-learn.org/stable/modules/generatedsklearn.ensemble.AdaBoostClassifier.html">AdaBoostClassifier</a> implements AdaBoost for classification, for which using the default <em>base_estimator</em> is OK to use. Despite the name, logistic regression is a classifier.</p>
+<h3 class="mume-header" id="classification-datasets">Classification datasets</h3>
+
+<p>Evaluate each of the above classification models on each the following UCI datasets:</p>
+<ol>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Diabetic+Retinopathy+Debrecen+Data+Set">Diabetic Retinopathy</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients">Default of credit card clients</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)">Breast Cancer Wisconsin</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Statlog+(German+Credit+Data)">Statlog (German credit data)</a> (recommend <code>german.doc</code> for instructions and <code>german-numeric</code> for data.)</li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/adult">Adult</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Yeast">Yeast</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/Thoracic+Surgery+Data">Thoracic Surgery Data</a></li>
+<li><a href="https://archive.ics.uci.edu/ml/datasets/seismic-bumps">Seismic-Bumps</a></li>
+</ol>
+<p>You&apos;ll need to read the data set descriptions to discern which fields should be features (inputs) and which are class labels to be predicted (outputs). If a dataset does not come with an explicit train/test split, then you will have to ensure your methodology can still evaluate the performance of the model on held-out data.</p>
+<p>Many datasets contain categorical features encoded as numbers, such as:</p>
+<blockquote>
+<p>education: 1 = graduate school; 2 = university; 3 = high school; 4 = other</p>
+</blockquote>
+<p>Some models (e.g., SVMs) are sensitive to how categorical features are encoded, while others are less sensitive (e.g., decision trees). Think carefully how you want to address this concern in your experiments, because it may impact your final ranking of the learning algorithms.</p>
+<h2 class="mume-header" id="2-regression">2. Regression</h2>
+
+<p>Compare the performance of 8 regressors across 8 regression datasets.</p>
+<h3 class="mume-header" id="regression-models">Regression models</h3>
+
+<p>You should evaluate the following 8 regression models:</p>
+<ol>
+<li>Linear regression</li>
+<li>Support vector regression</li>
+<li>Decision tree regression</li>
+<li>Random forest regression</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>-nearest neighbours regression</li>
+<li>AdaBoost regression</li>
+<li>Gaussian process regression</li>
+<li>Neural network regression</li>
+</ol>
+<p>Again, each is provided by scikit-learn with a unified interface: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html">MLPRegressor</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html">SVR</a>, <a href="https://scikit-learn.org/stable/modules/generatedsklearn.ensemble.AdaBoostRegressor.html">AdaBoostRegressor</a>, etc. The only new one is <a href="https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor">GaussianProcessRegressor</a> (unrelated to Gaussian naive Bayes).</p>
+<h3 class="mume-header" id="regression-datasets">Regression datasets</h3>
+
+<p>Evaluate each of the above regression models on each of the following the UCI repository:</p>
+<ol>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Wine+Quality">Wine Quality</a></li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Communities+and+Crime">Communities and Crime</a></li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/QSAR+aquatic+toxicity">QSAR aquatic toxicity</a></li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Facebook+metrics">Facebook metrics</a></li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset">Bike Sharing</a> (use <code>hour</code> data)</li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Student+Performance">Student Performance</a> (use just <code>student-por.csv</code> if you do not know how to merge the math grades)</li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/Concrete+Compressive+Strength">Concrete Compressive Strength</a></li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets/SGEMM+GPU+kernel+performance">SGEMM GPU kernel performance</a> (predict how fast two matrices can be multiplied by a GPU)</li>
+</ol>
+<h2 class="mume-header" id="3-classifier-interpretability">3. Classifier interpretability</h2>
+
+<p>Here you&apos;ll work with a classic image dataset. Your group should train two types of model: a decision tree, and a convolutional neural network. You then decide &quot;which model is more interpretable?&quot; and report conclusions.</p>
+<p>In steps:</p>
+<ol>
+<li>download and process the CIFAR-10 dataset, a standard image dataset;</li>
+<li>train a convolutional neural network (CNN) classifier using PyTorch;</li>
+<li>train a decision tree classifier;</li>
+<li>try to interpret the decision tree; and</li>
+<li>try to interpret the CNN using the &apos;activation maximization&apos; technique.</li>
+</ol>
+<p>Visit the <a href="https://www.cs.toronto.edu/~kriz/cifar.html">original CIFAR dataset website</a>. Read what the dataset contains. Download the &quot;CIFAR-10 python version.&quot; Extract the archive using <code>tar -xvf cifar-10-python.tar.gz</code> on Linux/Mac or <code>7z x cifar-10-python.tar.gz</code> on Windows (need <a href="https://www.7-zip.org/">7zip</a>). You should see separate files like <code>data_batch_1</code>. Follow the instructions on the CIFAR website for loading (unpickling) each file in Python. (Use the Python 3 instructions.) Annoying detail: to access the <code>data</code> and <code>labels</code> fields of the unpickled dictionary, you&apos;ll need to use byte keys <code>b&apos;data&apos;</code> and <code>b&apos;labels&apos;</code> rather than string keys <code>&apos;data&apos;</code> and <code>&apos;labels&apos;</code>.</p>
+<p>Read the CIFAR website&apos;s description of how the images are represented. Load the first batch of images (say, into an ndarray called <em>X</em>) and try to plot the first image <em>X[0]</em>. You might that plotting only requires reshaping <em>X[0]</em> from shape <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>3072</mn><mo separator="true">,</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(3072,)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3072</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mclose">)</span></span></span></span> into shape <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>32</mn><mo separator="true">,</mo><mn>32</mn><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(32,32,3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">32</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">32</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span></span> (a 32x32 RGB image), but that would be wrong (see below).</p>
+<center>
+<img src="img/cifar-example-wrong.png">
+</center>
+<p>The reason is that each CIFAR image is stored in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N,C,H,W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span> format. This format is expected by most CNNs layers, but not by Matplotlib. The outermost dimension of this format is over images <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mi>N</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0,\ldots,N-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">&#x2026;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>, the next dimension is over colour channels <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mi>C</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0,\ldots,C-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">&#x2026;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> (in this case <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo separator="true">,</mo><mi>G</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">R,G,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">G</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>), and the innermost dimensions are the height <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span> and width <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>. So, if we want to take our <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>C</mi><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(C,H,W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>-formatted image and visualize it with Matplotlib (<em>imshow</em>), we need to transpose the colour axis to be the inner-most one, giving the image format <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(H,W,C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span> that Matplotlib expects. As we can see, this image probably belongs to class <em>frog</em>.</p>
+<center>
+<img src="img/cifar-example-right.png">
+</center>
+<p>Before training a model, first write a script that &quot;unbatches&quot; the CIFAR data files. You should combine the training batches (each of size 10,000) into a single giant batch (of size 50,000). You should end up with a 50000x3072 ndarray <em>X</em> of dtype <em>np.uint8</em> as the features and a length-50000 ndarray <em>y</em> of dtype <em>np.int32</em> as the target labels. Likewise load the test batch and convert its targets from a <code>list</code> to an ndarray.</p>
+<p><strong>Decision tree classifier.</strong> Use your <em>X</em> and <em>y</em> ndarrays to train a decision tree classifier on the entire training set. You may have to limit the tree depth for training to complete in reasonable time. Report the decision tree&apos;s accuracy on held-out test data. You can try plotting the tree like you did in lab, but consider using the plotting function&apos;s <em>max_depth</em> option to only plot the top few layers of the tree.</p>
+<p><strong>Convolutional neural network classifier.</strong> This part of the project you may not be able to complete until learning about convolutional neural networks. You must train a convolutional neural network on the CIFAR dataset using <a href="https://pytorch.org/">PyTorch</a>. PyTorch is already installed in the lab machines, but can also be installed on your laptop. You will need to learn how to center and rescale your pixel values from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><mn>255</mn></mrow><annotation encoding="application/x-tex">0,\ldots,255</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">&#x2026;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">255</span></span></span></span> of dtype <em>np.uint8</em> to be <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo>&#x2212;</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[-1,1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">&#x2212;</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> of dtype <em>np.float32</em>. Use any architecture you like, but keep trying until you achieve at least 75% accuracy on the CIFAR test images. Train using <em>CrossEntropyLoss</em>. It may take you a few attempts and each training attempt may take 15-20 minutes on a laptop. To get higher accuracy, techniques like data augmentation may help (see the <code>torchvision</code> package). Ensure that your script saves your trained model.</p>
+<p><strong>Activation maximization for CNNs.</strong> Once your CNN is trained and saved, you can load it and start interrogating it. The idea of &quot;activation maximization&quot; is to ask the question: what input image would most strongly activate a particular output class prediction? Specifically, suppose we have an input image <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">x</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord mathbf">x</span></span></span></span>, which could be blank, or noise, or some other image. We feed this image through the CNN to get class activation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi mathvariant="bold">y</mi><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\mathbf{\hat{y}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.90232em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.70788em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span style="top:-3.01344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2875em;"><span class="mord mathbf">^</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span>. We then choose a particular class <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> and ask: how should I perturb the pixels in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">x</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord mathbf">x</span></span></span></span> so as to increase <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\hat{y}_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">^</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>? Deep learning frameworks allow us to compute the gradient of a particular class activation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\hat{y}_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;"><span class="mord">^</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> with respect to all image pixels <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">x</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord mathbf">x</span></span></span></span> by simply backpropagating. We can iterate this process, performing &quot;gradient ascent&quot; in pixel space. Below are two examples of an initial image <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">x</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord mathbf">x</span></span></span></span> and a new image after maximizing either the &apos;bird&apos; class label or the &apos;horse&apos; class label. You may not see these exact results. Report what you are able to see.</p>
+<center>
+<img src="img/cifar-activation-example.png">
+</center>
+<p>To understand how this works in PyTorch, at least in principle, try to understand how the code snippet below uses PyTorch&apos;s gradient functionality to find &quot;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> that maximizes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>&#x2212;</mo><mo stretchy="false">(</mo><mi>x</mi><mo>&#x2212;</mo><mn>3</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x)=-(x-3)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">&#x2212;</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>&quot;:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># Define some transformation of x, in this case a quadratic with maximum at +3</span>
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token punctuation">(</span>x <span class="token operator">-</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
+
+<span class="token comment"># Create a single scalar variable that stars with value 0. Also and notify PyTorch</span>
+<span class="token comment"># that we&apos;re eventually going to be asking for a gradient with respect to x.</span>
+x <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;%.3f&quot;</span> <span class="token operator">%</span> x<span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        
+    <span class="token comment"># Evaluate our function transforming x into some quantity y that we want to maximize</span>
+    y <span class="token operator">=</span> f<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    
+    <span class="token comment"># Backpropagate a gradient of y with respect to x; this fills the x.grad variable</span>
+    y<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># Move x a small step in a direction that would increase y</span>
+    x<span class="token punctuation">.</span>data <span class="token operator">+=</span> <span class="token number">0.2</span><span class="token operator">*</span>x<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>data
+    
+    <span class="token comment"># Reset the gradient for the next iteration, since backward() always adds to the current grad value.</span>
+    x<span class="token punctuation">.</span>grad<span class="token punctuation">.</span>data<span class="token punctuation">.</span>zero_<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;%.3f&quot;</span> <span class="token operator">%</span> x<span class="token punctuation">)</span>
+</pre><p>This code outputs the following sequence of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> values, which converge to the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span> that maximizes <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>0.000
+1.200
+1.920
+2.352
+2.611
+2.767
+2.860
+2.916
+2.950
+2.970
+2.982
+</code></pre><p>In activation maximization, we are doing the same thing but where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">x</mi></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord mathbf">x</span></span></span></span> is an image, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi mathvariant="bold">x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(\mathbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mclose">)</span></span></span></span> is a CNN, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> is some class activation score (the value being fed into the softmax for that particular class). You must implement activation maximization yourself. How meaningful are the patterns you see? Are you convinced that the model is learning high-level concepts like the appearance of &quot;dog&quot; and &quot;cat&quot;?</p>
+<h2 class="mume-header" id="4-novelty-component">4. Novelty component</h2>
+
+<p>The goal here is to make each project unique and to give students some freedom to explore.</p>
+<p>You must introduce a novel aspect to your analysis of classifiers and regressors, <em>or</em> a novel aspect to your investigation of interpretability. For example, you could add a new dataset to the comparisons, or do a &apos;deep dive&apos; one one particular dataset that&apos;s already included. You could do something as simple as try to inspect your CNN&apos;s filters or feature maps, as an alternatives means of trying to interpret the CNN. Or you could try applying interpretability techniques to one of the UCI datasets already analyzed, and report your conclusions.</p>
+<h1 class="mume-header" id="guidance-on-carrying-out-the-default-project">Guidance on carrying out the default project</h1>
+
+<p><strong>Hyperparameters.</strong> Some types of models have more hyperparameters than others. You do not need to try every hyperparameter. Choose 2&#x2013;3 hyperparameters that are likely to have impact, such as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>&#x3B3;</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05556em;">&#x3B3;</span></span></span></span> for SVM, or <em>max_depth</em> and <em>n_estimators</em> for random forests, or <em>hidden_layer_sizes</em> and <em>learning_rate</em> and <em>max_iter</em> for neural networks, etc. You should also specify how you trained your final model once the best hyperparameters were found.</p>
+<p><strong>Models not yet covered in lecture.</strong> Some of the models you are asked to evaluate will not be covered until later in the course (neural networks, Gaussian processes, etc.). That is OK. You can either ignore them for now, or you can still try them using default settings. Once we cover them in class, you&apos;ll want to revise your feature preprocessing and hyperparameter search based on your improved understanding of the models. Remember, you should always expect to frequently &quot;tweak and then re-run your experiments&quot;, so it is very important to make your whole training pipeline <em>scripted</em> and <em>reproducible</em> (random number seeds); see &quot;Tips on getting good marks&quot;.</p>
+<p><strong>Families of models.</strong> The suggested evaluation breaks models down into broad classes, such as &quot;SVMs&quot; rather than the more granular breakdown of &quot;linear SVM&quot; separate from &quot;RBF SVM.&quot; So, we could make a statement like &quot;SVM is the best classifier&quot; when in fact the truth could be &quot;RBF SVM worked best on dataset 1, whereas linear SVM worked best on dataset 2.&quot; Since these two example models belong to the SVM family, we&apos;ll count them as a win for the SVM family overall. We could likewise group models even more coarsely, as &quot;parametric&quot; or &quot;non-parametric&quot; and try to draw conclusions like &quot;non-parametric models are the best,&quot; but this is too broad a claim to be useful. Similarly the &quot;neural networks&quot; family includes a huge spectrum of possible architectures (networks with many or few layers, with many or few hidden units per layer, with different activation functions, etc.) and, if any one of the attempted architectures wins out on a particular data set, this individual win can be counted as a win for neural networks family as a whole. In other words, the number of layers and hidden units in a neural network can be treated as hyperparameters of &quot;neural networks&quot; rather than as separate types of models, and so they may need more computational investment in hyperparameter search than would a family of models that is more constrained.</p>
+<p><strong>Accessing data sets.</strong> Data for this project comes from the <a href="https://archive.ics.uci.edu/ml/index.php">UCI repository</a> and the University of Toronto <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR dataset website</a>. The purpose of this project is to have you work with real data, including some minimal processing such as loading tabular data from text files. That means that, to receive full marks, you should use basic functions like <code>numpy.loadtxt</code> or load the raw data yourself using Python. In other words, <span style="color:red"><em>your Python scripts should read the raw data</em></span>, and not other versions that you created (for example) in Excel. If you find a specialized Python packages to fetch your data for you. You should instead download the data from its original source, either in a web browser or with <code>wget</code>, and learn how to load it and process it from that form. For example, the <code>torchvision</code> Python package comes with a <a href="https://pytorch.org/docs/stable/torchvision/datasets.html#cifar">CIFAR10 DataSet class</a> that will automatically download the raw binary data from the University of Toronto servers and serve the images as PyTorch tensors in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N,C,H,W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span> tensor format. <span style="color:red"><em>Do not use this</em></span>. Instead, you should be downloading &quot;CIFAR-10 python version&quot; from the CIFAR website and learn to understand and load the raw data as it was originally stored. That being said, if you are running out of time on your project, you can cut corners by using &quot;data loaders&quot; and you&apos;ll only lose a few marks.</p>
+<p><strong>Missing values.</strong> Real-world datasets (<em>e.g.</em> from social media, businesses, hospitals) often contain &quot;missing values&quot; in their features. This means that the feature&apos;s actual value was unknown (unobserved). Throwing such data away is possible for the training set, but not for the test set. To still learn and to make predictions from the remaining values, one strategy is to &apos;impute&apos; the missing values. The simplest way to impute a missing value is to assume (possibly incorrectly) that it probably took the most &apos;typical&apos; value of that feature across the training set. This is considered a type of preprocessing, to prepare the data for training. See the scikit-learn guide for <a href="https://scikit-learn.org/stable/modules/impute.html#impute">imputing missing values</a>. This is an important skill in real life practice.</p>
+<p><strong>Long training times.</strong> Most of the datasets are small, and training will complete in seconds. A few datasets are large enough that training is not always fast. For example, when training a deep neural network on CIFAR-10 data, you should expect training time to be several minutes to an hour on a CPU, depending on the architecture and regularization. If you run the classification and regression experiments too close to the project deadline, you may find that a particular algorithm takes too long (possibly hours) to train on a particular dataset. If that happens, your report will have to draw conclusions from incomplete results, so be sure to indicate this.</p>
+<p><strong>Reporting model performance.</strong> You need to decide how to evaluate and comparing models across datasets. Your evaluation methodology needs to be explained in the report. You can propose a methodology that you find convincing or cite an existing research paper (a benchmark) as inspiration for your chosen methodology. Your project code must ultimately evaluate every (model type, dataset) pair and then compare those individual results in such a way as to draw conclusions about which model (or models) you believe to be &apos;best&apos;, if any.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

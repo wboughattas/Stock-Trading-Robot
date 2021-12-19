@@ -1,4 +1,4 @@
-# Forex Trading Robot
+# README for G04
 
 Our project relies mainly on sklearn, pandas, PyTorch, and matplotlib.
 Running the code requires the following files:

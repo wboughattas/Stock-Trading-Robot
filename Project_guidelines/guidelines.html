@@ -1,0 +1,492 @@
+<!DOCTYPE html><html><head>
+      <title>General Project Guidelines COMP 432 Fall 2021</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      @import url('https://rsms.me/inter/inter.css');
+/**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  font-family: 'Inter';
+  font-size: 14px;
+  /*ul {
+    Margin-top: -0.8em;
+    Margin-bottom: 0.2em;
+  }
+
+  ol {
+    Margin-top: -0.8em;
+    Margin-bottom: 0.2em;
+  }*/
+}
+.markdown-preview.markdown-preview .center {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview blockquote {
+  color: #888;
+  background: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview blockquote strong {
+  color: #666;
+}
+.answer {
+  padding: 0.1em 3em 1em 3em;
+  color: #00d;
+}
+.hide-answers .answer {
+  visibility: hidden;
+}
+@media screen and (min-width: 790px) {
+  html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+    padding: 2em calc(50% - 395px + 2em);
+  }
+}
+@media screen and (max-width: 790px) {
+  html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+    padding: 2em 2em;
+  }
+}
+.preview-container .mume[for="preview"] {
+  padding: 2em calc(50% - 395px + 2em) !important;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="project-guidelines-nbspspan-stylecoloraaacomp-432span">Project Guidelines  &#xA0;<span style="color:#aaa">COMP 432</span></h1>
+
+<p>Choose either:</p>
+<ul>
+<li>a custom project, for groups who agree on an idea they want to try; or</li>
+<li>a default project, for groups who just want to get started and get ML experience.</li>
+</ul>
+<p>For a <strong>custom project</strong> the 42% grade breaks down into the following deliverables, as in the syllabus:</p>
+<ul>
+<li>3% project proposal</li>
+<li>5% project presentation</li>
+<li>4% originality</li>
+<li>20% project report</li>
+<li>10% code and data</li>
+</ul>
+<p>For a <strong>default project</strong> the breakdown is the same, except there is <strong>no proposal</strong>; the 3% weight of the proposal is shifted to a 13% code and data weight.</p>
+<p>To see the default project plan, find <code>default_project.pdf</code> in the project guidelines ZIP file.</p>
+<h2 class="mume-header" id="project-report-guidance">Project report guidance</h2>
+
+<p>Each project type has a <code>report.{tex,pdf}</code> template. This 2-column <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span> template is based on the one for <em>CVPR</em>: the IEEE International Conference on Computer Vision and Pattern Recognition. CVPR is a top conference in computer vision and machine learning. You do not need to use the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span> template itself.</p>
+<p>Guidance:</p>
+<ul>
+<li><strong>Word vs LaTeX.</strong> You are encouraged to try writing their report in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span>, because then you&apos;ll see how scientific papers are written in the computer and engineering sciences. However, Word is OK too. Either way, there are options for collaborating on Word documents (Office 365; Google Docs + export) or on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span> documents (collaborative platforms like <a href="https://www.overleaf.com">overleaf.com</a>).</li>
+<li><strong>Length.</strong> Aim for <strong>3-4 pages</strong> at a density that approximates the report template (font size, margins).</li>
+<li><strong>Clarity.</strong> The most common failure mode of a project report is lack of clarity. Even if you are good at machine learning, describing the &quot;what&quot; and the &quot;why&quot; of what you did, and at the appropriate level of detail, is an essential skill.</li>
+<li><strong>Logical consistency.</strong> The second-most common failure mode of a project is a disconnect between stated goal(s) and the experiments that were performed. For example, if your goal is classification, then saying &quot;we used K-means&quot; does not make logical sense on its own, and would require further explanation.</li>
+<li><strong>Well-supported conclusions.</strong> The third-most common failure mode of a project is when there is a disconnect between the conclusions versus what the experiments actually show. It is much better to depict an honest assessment of what you could / couldn&apos;t conclude, or what you did / didn&apos;t succeed at, than to try to impress the instructor with broad sweeping claims that are not justified by your analysis. When your conclusions overreach or misrepresent, that indicates to the instructor (or, some day, to your boss) that your conclusions are not to be trusted.</li>
+<li><strong>Best practices.</strong> Finally, if you demonstrate that at least some ML &quot;best practices&quot; were applied during your project, then this can strengthen your grade. For example, try to highlight things like:
+<ul>
+<li>Was the metric of success designed from a stakeholder point of view, <em>i.e.</em>, did it measure what users of the trained system would understand and actually care about?</li>
+<li>Were imbalances in the data noted?</li>
+<li>Was a feature preprocessing pipeline designed and applied consistently? Was its impact assessed?</li>
+<li>Was the benefit over a simple baseline included, such as a dummy classifier / regressor?</li>
+<li>Was a hyperparameter search conducted to give each methods its &quot;best chance&quot;?</li>
+<li>Was data splitting scheme used for a dataset (random, time split, grouped split, etc.) consistent with how a model would be expected to make predictions at test-time?</li>
+</ul>
+</li>
+<li><strong>Supplementary pages.</strong> You can include extra pages in your report, but your report should still &apos;conclude&apos; within the page limit, because the instructor is not obliged to look at the extra pages before grading your work. If you do include supplementary pages, best to fill them with results that are easy to understand at a glance, like extra examples of data or predictions, or raw tables that were already summarized in the main text of the report.</li>
+</ul>
+<h2 class="mume-header" id="project-presentation-guidance">Project presentation guidance</h2>
+
+<p>The purpose of the slide presentation is to give the instructor, and other students, a high-level preview of:</p>
+<ol>
+<li><em>What</em> goal you were trying to achieve.</li>
+<li>The kind of <em>data</em> you were working with.</li>
+<li><em>How</em> you tried to achieve your goal.</li>
+<li>To what degree you <em>did</em> or <em>did not</em> achieve your goal.</li>
+</ol>
+<p>For fun you can finish your presentation a sentence or two on lessons-learned, or &quot;If we were to do this project again, the biggest thing we would do differently is ...&quot;</p>
+<p>Guidance:</p>
+<ul>
+<li><strong>Length.</strong> 2-3 minutes. Custom project should focus on explaining the problem setting and the conclusions. Default projects should focus on conclusions and what their novelty component was.</li>
+<li><strong>Use slides.</strong> You probably only need 4-6 slides total. Consider using <a href="https://support.microsoft.com/en-us/office/work-together-on-powerpoint-presentations-0c30ee3f-8674-4f0e-97be-89cf2892a34d">Microsoft Sharepoint</a> or <a href="https://www.google.ca/slides/about/">Google Slides</a> so that team members can collaborate remotely. (Avoid recording a video of you scrolling through Jupyter notebook code; if you really think it&apos;s important to show code during your presentation, you can put a screenshot in your slides.)</li>
+<li><strong>Use Zoom.</strong> You can record the presentation however you want, but the easiest way to record, especially if you record as a group, is to have someone share the slides and begin <a href="https://support.zoom.us/hc/en-us/articles/201362473-Local-recording">Zoom local recording</a>. You can start/stop recording for each attempt and, when the session is over, Zoom will create a separate file for each of your attempts.</li>
+<li><strong>Faces are optional.</strong> Audio is obviously required, but whether you show your faces is up to you.</li>
+<li><strong>Multiple speakers is optional.</strong> It would be nice if each group member would speak during the presentation, but it is not required. For example, a poor microphone may impede presentation quality, or it may be too difficult for the entire group to coordinate recording together.</li>
+<li><strong>Show the fun stuff.</strong> You don&apos;t have to show all your results. Instead, just focus on the main points, and on getting the viewer excited to read your report.</li>
+<li><strong>Relax.</strong> You will not be penalized for &quot;ums&quot; and &quot;uuuuhhs&quot; or for correcting yourself, so do not fall into the trap of &quot;restart recording on first mistake&quot;; just make sure the material is clear, and be done with it.</li>
+</ul>
+<h2 class="mume-header" id="project-code-guidance">Project code guidance</h2>
+
+<p>Some criteria / suggestions:</p>
+<ul>
+<li><strong>Acknowledge sources.</strong> Using code from the internet as part of your project is not a problem. Using code from the internet <em>without acknowledging the source</em> is a major problem. The absolute worst thing you can do for you and your team is to paste chunks code from the internet into your project and then pretend that you wrote the code &#x2014; that is a clear violation of academic integrity.</li>
+<li><strong>Avoid copy/paste.</strong> If the TAs see that long blocks of code were copied and pasted over and over, across scripts or notebooks, without any attempt at modularizing that code for re-use, then you may lose marks.</li>
+<li><strong>Avoid hard-coded paths.</strong> If your code has things like <code>open(&quot;/home/me/comp6321/data/foo.txt&quot;)</code> then there&apos;s no way it&apos;s going to run on another computer. Try to organize your data and configuration files so that your scripts can refer to the files using relative paths, rather than absolute paths.</li>
+<li><strong>Code organization.</strong> The TA will assess whether the code was reasonably organized. This assessment is somewhat subjective, but you just have to live with that.</li>
+<li><strong>Code comments.</strong> Try to comment important functions or important computations in the code.</li>
+<li><strong>Reproducibility is good.</strong> Reproducible code is more likely to get a full grade. This includes simple universal best practices like setting the relevant random seeds (Numpy, PyTorch, TensorFlow) or, if code is intended to run on a local machine, <a href="https://towardsdatascience.com/manage-data-science-and-machine-learning-environments-using-conda-42b9b2f0689a">exporting the conda/pip environment</a> needed to run the code. However, if it is too late for your team do think about reproducibility, you can still get a good code grade.</li>
+<li><strong>Easy to run.</strong> Even if your code is not fully scripted/automated, the fewer steps a TA would have to understand to run your code, and the clearer it is how to do those steps, the better.</li>
+<li><strong>Submit notebooks with results included.</strong> In case a TA cannot run your code, it is better to submit your notebooks with the output cells (plots, images, output) included, so that the TA can at least see what the output was when <em>you</em> ran them.</li>
+<li><strong>Package small datasets with the project code.</strong> Moodle accepts projects up to 250 MB in total size. If your compressed data set fits well within that limit, then it should be directly included in the submission.</li>
+<li><strong>Link to large data sets.</strong> If your data is too large to include, you must provide a link (Dropbox, Google Drive, etc.) where the file&apos;s modification date is clearly visible. See &quot;Submitting files.&quot;</li>
+</ul>
+<h1 class="mume-header" id="submission-guidance">Submission guidance</h1>
+
+<p>In each example below, replace <code>GXX</code> with your group ID. In each case, <strong>only one group member should submit!</strong> If multiple group members submit, the instructor will pick only one version to grade, arbitrarily.</p>
+<h2 class="mume-header" id="submitting-the-proposal-custom-project-only">Submitting the proposal (custom project only)</h2>
+
+<p>Find the &quot;project proposal submission&quot; item in Moodle. Submit either your own proposal as <code>GXX_project_proposal.pdf</code>, or a completed <code>GXX_project_proposal_form.docx</code> file.</p>
+<h2 class="mume-header" id="submitting-the-presentation">Submitting the presentation</h2>
+
+<p>Find the &quot;project presentation submission&quot; item in Moodle. Submit a single <code>GXX_presentation.mp4</code> file. The instructor would prefer to receive <code>.mp4</code> files, like Zoom creates, but other formats (<code>.mov</code>, <code>.wmv</code>) can work as well. Do not submit <code>.pptx</code>.</p>
+<h2 class="mume-header" id="submitting-the-report-and-code">Submitting the report and code</h2>
+
+<p>Find the &quot;project submission&quot; item in Moodle. Submit a single <code>GXX_project.zip</code> file (&lt;250 MB).</p>
+<p>Unzipping your file should give:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ unzip GXX_project.zip
+GXX_project/GXX_report.pdf           &lt;-- your report
+GXX_project/GXX_code_and_data.zip    &lt;-- code and data that can be further unzipped
+GXX_project/GXX_readme.txt           &lt;-- overview of code and data
+</code></pre><p>You do <em>not</em> need to submit the slides from your presentation video.<br>
+You do <em>not</em> need to submit a copy of your original proposal.</p>
+<p><strong>GXX_report.pdf</strong> This file is your report in PDF format.</p>
+<p><strong>GXX_code_and_data.zip</strong> This file should contain all your configuration files, scripts, modules, and notebooks needed to run your code. Projects with small datasets should include the data files as well. For example, Excel-style tabular data is often small enough, whereas computer vision or music projects may require too much data to fit into Moodle. Projects that only run in Google Colab or similar should include downloaded copies of the notebooks, but not of the data (instead, a link to data should be given).</p>
+<p><strong>GXX_readme.txt</strong> This file is important for the TA and instructor. It is the first thing they read before looking at your code. It should contain a brief overview of the key files in your project code, and explain to the instructor/TA how the code and data is organized, and what the project dependencies are.</p>
+<p>For example, something like this is all you need:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>README for GXX
+--------------
+
+Our project relies mainly on sklearn, pandas, PyTorch, and JAX.
+Our code submission contains the following files:
+
+  ./code/requirements.txt    &lt;-- python environment requirements.txt file
+  ./code/util/*.py           &lt;-- some utility functions we wrote
+  ./code/preprocess.py       &lt;-- script to preprocess our data
+  ./code/train_svm.py        &lt;-- script to train our SVM
+  ./code/train_rf.py         &lt;-- script to train our random forest
+  ./code/train_nnet.py       &lt;-- script to train our neural net
+  ./code/report.ipynb        &lt;-- notebook with figures and tables for report
+  ./data/housing_prices.csv  &lt;-- raw data set
+  
+* The files should be run in the order:
+   preprocess.py
+   train_*.py
+   report.ipynb
+* GPU is not required.
+* Training takes ~2 hours.
+* The report.ipynb notebook creates an &quot;out&quot; directory and saves results there.
+
+The housing_prices data was downloaded from https://kaggle.com/blahblah
+
+For preprocessing and training the SVM we relied heavily on the tutorial
+found at https://towardsdatascience.com/blahblah
+</code></pre><p>If you used Google Colab, still explain what the included notebook files do, and provide a shared link to the live notebooks which have access to the data. Do not alter the live notebooks after the deadline.</p>
+<h2 class="mume-header" id="citing-source-material-in-project-reports">Citing source material in project reports</h2>
+
+<p>It&apos;s very important to cite sources of code, data, and even ideas. A citation can be a footnote with a URL, or it can be the author, title, and year of an article or textbook.</p>
+<p>The <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext><mrow></mrow></mrow><annotation encoding="application/x-tex">\LaTeX{}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span><span class="mord"></span></span></span></span> report template comes with a bibliography and examples of how to cite it. However, if you are unfamiliar with citations in LaTeX, you can ignore it and use your own citation convention. The template already includes the <code>hyperref</code> package, which provides the <code>\url{...}</code> command.</p>
+<h1 class="mume-header" id="tips-for-getting-a-good-grade">Tips for getting a good grade</h1>
+
+<ul>
+<li>
+<p><strong>Navigating uncertainty.</strong> Uncertainty and anxiety is normal part of navigating a project with open-ended aspects. Your instructor and TAs will try to guide you with specific questions that you may have, but the questions have to come from you. Use office hours and TAs to resolve your uncertainties and give you confidence.</p>
+</li>
+<li>
+<p><strong>Apply practices from lecture and labs.</strong> The general idea is to apply the techniques you learned in lecture. Try to be systematic in your analysis, for example ensuring the same hyperparameter search and training procedures are applied to all data sets. Obviously something like &quot;training on the testing data&quot; is a huge no-no and would render your conclusions invalid. You are of course free to explore other techniques if they interest you or if you believe that they will provide insight or surprises to the analysis.</p>
+</li>
+<li>
+<p><strong>Aim for reasonably-good predictive accuracy.</strong> If you report that &quot;model type <em>X</em> is the best because it it had an average test performance of 84% across the data sets&quot; and yet most other groups found that model type <em>X</em> got an average test performance of 98%, then this may reflect some problem in the way that you either processed the data or trained models of type <em>X</em>. However, you will <strong>not lose marks</strong> just because a few other groups got better prediction accuracy than you on a particular dataset, or even just because some other group came to a different conclusion about what was &quot;best.&quot; As long as your predictive accuracy is not indicative of a bug or weak attempt at modeling, do not worry about fine-tuning performance.</p>
+</li>
+<li>
+<p><strong>Reproducible results.</strong> Always set the random seed or random state of whatever Python framework you&apos;re about to rely on, be it numpy, sklearn, or torch. Don&apos;t end up with a different train/test split the next time you run your training pipeline! At least not unintentionally!</p>
+</li>
+<li>
+<p><strong>Automate end-to-end as much as possible.</strong> The more that your project code resembles an automated pipeline that goes from raw downloaded data to performance numbers, the better. In the ideal, it should be possible to generate <em>all</em> your results by running a single master script. This script would trigger individual scripts that run more specific groups of experiments (load training data, preprocess, hyperparameter search and final training, save the model, load the model, load the test data, generate raw performance numbers, dump the raw performance numbers to one or more files). If a single master script is not possible, that&apos;s OK, but keep them to a minimum. The final performance numbers that you report in your tables and text should ideally come from running scripts, and <em>not</em> be the result of some transient IPython notebook code cells for which you have manually been running indvidual code cells. You can rely on IPython notebooks to help you make plots (PNG or PDF) from that raw data, but the Jupyter notebook should not be generating the raw results. Use Jupyter notebooks primarily for prototyping, if you wish. You should also try to avoid manually processing the raw data, such as editing the raw data files in a text editor; if a particular data set (say, a UCI data set) comes in an odd format that needs custom processing (removing header lines, converting categorical strings to numbers, etc) then that custom processing should ideally be done by a Python script, not directly by your fingers! You can of course cache intermediate results to make it faster to initiate training, such as storing a Numpy representation of the cleaned-up data. Still, if you are too pressed for time to be this systematic, you can still simplify the raw files &quot;by hand&quot; for the sake of expedience and you will not lose many marks for that.</p>
+</li>
+<li>
+<p><strong>Quality of scientific presentation</strong> is important for this course. That means presenting figures, plots, and tables that are maximally informative for the scientific question being asked. For example, students should know when to use a scatter plot, a bar plot, a box plot, etc. Employers and professors often find that students and recent graduates lack these skills, so this is the best time to learn as much as possible! Use examples of plots and tables from labs or from your favourite research papers as a guide.</p>
+</li>
+<li>
+<p><strong>Quality of Python code</strong> does have an impact on grade, though likely modest. Employers and professors find Python coding one of the most important skills that ML students and graduates lack.</p>
+</li>
+<li>
+<p><strong>Quality of writing</strong> is somewhat important for this course. Apart from Python coding, scientific writing is the next thing that employers and professors wish that students and graduates were better at. That being said, this is a machine learning course, not a writing course, so poor writing will not ruin your grade, and minor grammatical errors will have no impact. But you are unlikely to get top grades if you have a report that is unclear or incoherent, even if your code itself is clean, concise, and systematic.</p>
+</li>
+<li>
+<p><strong>Methodological and code consistency across the project.</strong> For the predictive accuracy component, avoid submitting a project where it&apos;s clear that each team member worked independently and did not share a common underlying methodology or codebase. Here are some examples where a team missed opportunities to consolidate their code/ideas:</p>
+<ul>
+<li>One team member does classification, the other does regression, and they each use completely different methods and/or code for doing hyperparameter search.</li>
+<li>Multiple versions of code to load data sets that are in the same format. If two data sets are in the same or similar format, they should be loaded by the same code.</li>
+<li>The project code contains several scripts that must be run to reproduce results, but each script follows a different style for accepting arguments (input directories, output directors, etc.)</li>
+<li>Different versions of code that generate what is essentially the same kind of plot.</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
