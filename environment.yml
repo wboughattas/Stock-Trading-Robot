@@ -1,4 +1,4 @@
-name: comp432_project
+name: Crypto-Trading-Robot
 channels:
   - pytorch
   - defaults
