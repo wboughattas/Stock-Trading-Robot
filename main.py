@@ -10,8 +10,10 @@ from datetime import datetime
 from decimal import Decimal
 from pytz import timezone
 
-
-
+minutes_processed = {}
+minute_candlesticks = []
+current_trade = None
+previous_trade = None
 
 
 def on_open(ws):
@@ -23,15 +25,15 @@ def on_open(ws):
 
 
 def on_message(ws, message):
-    minutes_processed = {}
-    minute_candlesticks = []
+    global current_trade, previous_trade
 
     current_trades = json.loads(message)
 
     if len(current_trades['data']) > 0:
-        for idx, current_trade in enumerate(current_trades['data']):
+        for idx, new_data in enumerate(current_trades['data']):
             previous_trade = current_trade
-            trade_time = datetime.fromtimestamp(current_trade['t']/1000, timezone('US/Eastern'))
+            current_trade = new_data
+            trade_time = datetime.fromtimestamp(current_trade['t'] / 1000, timezone('US/Eastern'))
             trade_time_ms = trade_time.strftime('%Y-%m-%d %H:%M:%S.%f')
             trade_time_min = trade_time.strftime('%Y-%m-%d %H:%M')
             print('{} : {} : {}'.format(trade_time_ms, current_trade['p'], current_trade['v']))
