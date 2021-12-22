@@ -55,7 +55,7 @@ def on_message(ws, message):
 
             if len(minute_candlesticks) > 0:
                 current_candlestick = minute_candlesticks[-1]
-                current_candlestick['volume'] += previous_trade['v']
+                current_candlestick['volume'] += current_trade['v']
                 if current_trade['p'] > current_candlestick['high']:
                     current_candlestick['high'] = current_trade['p']
                 if current_trade['p'] < current_candlestick['low']:
