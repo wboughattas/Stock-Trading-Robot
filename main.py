@@ -1,14 +1,9 @@
-import finnhub as fb
-import requests
-import yfinance as yf
-from yahoo_fin import stock_info as si
-from tradingview_ta import TA_Handler, Interval, Exchange
-import pandas as pd
 import websocket
 import json
 from datetime import datetime
-from decimal import Decimal
 from pytz import timezone
+import mysqlPy
+from connections import SOCKET, MYSQL_host_name, MYSQL_user_name, MYSQL_user_password, MYSQL_db_name
 
 minutes_processed = {}
 minute_candlesticks = []
@@ -36,7 +31,7 @@ def on_message(ws, message):
             trade_time = datetime.fromtimestamp(current_trade['t'] / 1000, timezone('US/Eastern'))
             trade_time_ms = trade_time.strftime('%Y-%m-%d %H:%M:%S.%f')
             trade_time_min = trade_time.strftime('%Y-%m-%d %H:%M')
-            print('{} : {} : {}'.format(trade_time_ms, current_trade['p'], current_trade['v']))
+            print('{} : {} : {} : {}'.format(current_trade['s'], trade_time_ms, current_trade['p'], current_trade['v']))
             # ingest to trade_db
 
             if trade_time_min not in minutes_processed:
@@ -76,13 +71,13 @@ def on_error(ws, error):
 
 
 if __name__ == '__main__':
-    websocket.enableTrace(False)
-    socket = "wss://ws.finnhub.io?token=c70t4t2ad3ifhkk9995g"
-    web_socket = websocket.WebSocketApp(socket,
+    web_socket = websocket.WebSocketApp(SOCKET,
                                         on_open=on_open,
                                         on_message=on_message,
                                         on_close=on_close,
                                         on_error=on_error)
-    web_socket.run_forever()
+    sql_connection = mysqlPy.create_db_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password, MYSQL_db_name)
+
+    # web_socket.run_forever()
 
     print()
