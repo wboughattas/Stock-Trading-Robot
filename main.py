@@ -5,16 +5,20 @@ from pytz import timezone
 import mysqlPy
 from connections import SOCKET, MYSQL_host_name, MYSQL_user_name, MYSQL_user_password, MYSQL_db_name
 
+
 minutes_processed = {}
 minute_candlesticks = []
 current_trade = None
 previous_trade = None
 
+stock_exchange = "BINANCE"
+stock_symbol = "BTCUSDT"
+
 
 def on_open(ws):
     message = {
         "type": "subscribe",
-        "symbol": "BINANCE:BTCUSDT"
+        "symbol": ':'.join([stock_exchange, stock_symbol])
     }
     ws.send(json.dumps(message))
 
@@ -23,7 +27,6 @@ def on_message(ws, message):
     global current_trade, previous_trade
 
     current_trades = json.loads(message)
-
     if len(current_trades['data']) > 0:
         for idx, new_data in enumerate(current_trades['data']):
             previous_trade = current_trade
@@ -76,8 +79,9 @@ if __name__ == '__main__':
                                         on_message=on_message,
                                         on_close=on_close,
                                         on_error=on_error)
-    sql_connection = mysqlPy.create_db_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password, MYSQL_db_name)
+    sql_connection = mysqlPy.create_server_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password)
+    mysqlPy.create_ifn(sql_connection, 'SCHEMA', '-'.join([stock_exchange, stock_symbol]), 'trade')
 
-    # web_socket.run_forever()
+    web_socket.run_forever()
 
     print()
