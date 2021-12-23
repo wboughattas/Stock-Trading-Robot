@@ -79,8 +79,8 @@ if __name__ == '__main__':
                                         on_message=on_message,
                                         on_close=on_close,
                                         on_error=on_error)
-    sql_connection = mysqlPy.create_server_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password)
-    mysqlPy.create_ifn(sql_connection, 'SCHEMA', '-'.join([stock_exchange, stock_symbol]), 'trade')
+    # sql_connection = mysqlPy.create_server_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password)
+    # mysqlPy.create_ifn(sql_connection, 'SCHEMA', '-'.join([stock_exchange, stock_symbol]), 'trade')
 
     web_socket.run_forever()
 
