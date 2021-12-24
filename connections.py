@@ -1,6 +1,5 @@
-SOCKET = "wss://ws.finnhub.io?token="
+socket = 'wss://ws.finnhub.io?token=c70t4t2ad3ifhkk9995g'
 
-MYSQL_host_name = 'localhost'
-MYSQL_user_name = 'root'
-MYSQL_user_password = 'password'
-MYSQL_db_name = 'db_name'
+token = 'UgYCvu4OUsWEnfzjmZxLOTVC4sR8nC95W4_45AwRRkJXq_Tt7lrNhNBR-pld3wO1DO1joy0_sTI_Na1atvTX3Q=='
+org = 'boga'
+bucket = 'temp'

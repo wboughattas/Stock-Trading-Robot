@@ -1,8 +1,6 @@
 /.git
 /.idea
-python
-__pycache__/
+/venv
+/__pycache__
 *.py[cod]
 *$py.class
-/venv
-connections.py

@@ -2,9 +2,9 @@ import websocket
 import json
 from datetime import datetime
 from pytz import timezone
-import mysqlPy
-from connections import SOCKET, MYSQL_host_name, MYSQL_user_name, MYSQL_user_password, MYSQL_db_name
-
+from connections import socket, token, org, bucket
+from influxdb_client import InfluxDBClient, Point, WritePrecision, WriteOptions
+from influxdb_client.client.write_api import SYNCHRONOUS
 
 minutes_processed = {}
 minute_candlesticks = []
@@ -74,14 +74,48 @@ def on_error(ws, error):
 
 
 if __name__ == '__main__':
-    web_socket = websocket.WebSocketApp(SOCKET,
+    web_socket = websocket.WebSocketApp(socket,
                                         on_open=on_open,
                                         on_message=on_message,
                                         on_close=on_close,
                                         on_error=on_error)
-    # sql_connection = mysqlPy.create_server_connection(MYSQL_host_name, MYSQL_user_name, MYSQL_user_password)
-    # mysqlPy.create_ifn(sql_connection, 'SCHEMA', '-'.join([stock_exchange, stock_symbol]), 'trade')
+    # web_socket.run_forever()
 
-    web_socket.run_forever()
+    # flux write query
+    write = \
+        'import "experimental/csv"\
+        relativeToNow = (tables=<-) =>\
+            tables\
+                |> elapsed()\
+                |> sort(columns: ["_time"], desc: true)\
+                |> cumulativeSum(columns: ["elapsed"])\
+                |> map(fn: (r) => ({ r with _time: time(v: int(v: now()) - (r.elapsed * 1000000000))}))\
+        csv.from(url: "https://influx-testdata.s3.amazonaws.com/noaa.csv")\
+            |> relativeToNow()\
+            |> to(bucket: "test-bucket", org: "test-org")'
+
+    # flux read query
+    read = \
+        'from(bucket: "temp")\
+            |> range(start: -3h)\
+            |> filter(fn: (r) => r._measurement == "average_temperature")\
+            |> filter(fn: (r) => r._field == "degrees")\
+            |> filter(fn: (r) => r.location == "coyote_creek")'
+
+    # establish a connection
+    client = InfluxDBClient(url="http://localhost:8086", token=token, org=org)
+
+    # instantiate the WriteAPI and QueryAPI
+    # write_api = client.write_api()
+    query_api = client.query_api()
+
+    # create and write the point
+    # write_api.write(bucket=bucket, org=org, record=p)
+    query_api.query(query=write)
+    # return the table and print the result
+    result = query_api.query(org=org, query=read)
+    for table in result:
+        for record in table.records:
+            print(record.get_value(), record.get_field())
 
     print()

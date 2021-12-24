@@ -2,9 +2,11 @@
 
 Execute the following command to ignore changes to already-tracked connections.py to not leak private credentials:
 ```
+git rm --cached connections.py
 git update-index --assume-unchanged connections.py
 ```
 
+Execute the following commands if you intend to use a conda environment.
 The following commands require setting the project root directory as active directory.
 ```
 cd <project-root-directory>
