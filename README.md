@@ -23,7 +23,6 @@ Get live Github flags from [shields io](https://shields.io/)
     - [TEST](#TEST)
     - [PROD](#PROD)
 <!--te-->
-https://github.com/wboughattas/Stock-Trading-Robot#run-locally
 
 ## Run Locally
 
