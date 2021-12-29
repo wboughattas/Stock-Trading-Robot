@@ -4,25 +4,26 @@ Get live Github flags from [shields io](https://shields.io/)
 
 ## Table of Contents  
 <!--ts-->
-- [Run Locally](#Run Locally)
-- [Skills Summary](#Skills Summary)
+- [Run Locally](#Run-Locally)
+- [Skills Summary](#Skills-Summary)
   - [Contributors](#Contributors)
-  - [Skills Required](#Skills Required)
+  - [Skills Required](#Skills-Required)
 - [Roadmap](#Roadmap)
-  - [Git workflow](#Git workflow)
+  - [Git workflow](#Git-workflow)
     - [DEV](#DEV)
-      - [feature/establish-fill-trade-db](#feature/establish-fill-trade-db)
-      - [feature/integrate-gradle](#feature/integrate-gradle)
-      - [feature/bloomberg-api](#feature/bloomberg-api)
-      - [feature/nltk](#feature/nltk)
-      - [feature/ML-predict](#feature/ML-predict)
-      - [feature/ML-decision-making](#feature/ML-decision-making)
-      - [feature/alpaca-api-buy-sell](#feature/alpaca-api-buy-sell)
-      - [feature/system-hardware](#feature/system-hardware)
-      - [feature/ui](#feature/ui)
+      - [feature/establish-fill-trade-db](#featureestablish-fill-trade-db)
+      - [feature/integrate-gradle](#featureintegrate-gradle)
+      - [feature/bloomberg-api](#featurebloomberg-api)
+      - [feature/nltk](#featurenltk)
+      - [feature/ML-predict](#featureML-predict)
+      - [feature/ML-decision-making](#featureML-decision-making)
+      - [feature/alpaca-api-buy-sell](#featurealpaca-api-buy-sell)
+      - [feature/system-hardware](#featuresystem-hardware)
+      - [feature/ui](#featureui)
     - [TEST](#TEST)
     - [PROD](#PROD)
 <!--te-->
+https://github.com/wboughattas/Stock-Trading-Robot#run-locally
 
 ## Run Locally
 
