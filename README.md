@@ -41,6 +41,11 @@ Install dependencies
   pip install -r requirements.txt
 ```
 
+Install [Gradle 7.3.3](https://gradle.org/install/#helpful-information) which will manage your dependencies automatically
+```bash
+  gradle
+```
+
 Install [InfluxDB2.0](https://docs.influxdata.com/influxdb/v2.0/install/) and start influxDB2.0 local server
 ```bash
   influxd
