@@ -126,6 +126,7 @@ To create and populate the order book dataset:
 * [ ] Lookup for historical order book trades 
 
 #### feature/integrate-gradle
+* [x] add gradle to the environment 
 * [ ] replace pip with gradle
 * [ ] update gradle with already existing requirements
 * [ ] .
