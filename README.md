@@ -66,10 +66,10 @@ bucket = '<dataset-name>'
 | [@Alessandro Morsella](https://github.com/Alessmorsella)                   |                                           |               |
 | [@Charles-Etienne Désormeaux](https://github.com/CharlesEtienneDesormeaux) |                                           |               |
 | [@Humam Hawara](https://www.github.com/Humamhwr)                           |                                           |               |
-| [@Wasim Boughattas](https://github.com/wboughattas)                        |SQL-ML-Pandas/torch                        |X              |
+| [@Wasim Boughattas](https://github.com/wboughattas)                        |SQL/Flux-ML-Pandas/torch                   |X              |
 
 ### Skills Required
-- SQL: SQL integration with Python/Java and automated DML/DLL
+- SQL/Flux: InfluxDB integration with Python/Java and automated DML/DLL
 - Pandas/torch: Quick and efficient data manipulation to set up ML models
 - ML: Predict future prices
 - NLTK: Natural language processing
@@ -100,8 +100,37 @@ This keeps the dev version clean"
 
 Each stock has 3 datasets (sorted by time desc) with data from 2010: 
 1. live/historical stock Trades
+
+| time | _stop |
+|:------:|:-----:|
+| 2016-06-13T17:43:50.1004002Z       |       |
+
 2. live/historical intraday indicators
-3. live/historical order book.
+
+| _start | _stop | _time | _measurement | _field | _value | _time | _measurement | 
+|:------:|:-----:|:-----:|:------------:|:------:|:------:|:-----:|:------------:|
+|        |       |       |              |        |        |       |              |
+
+3. live/historical order book
+
+| _start | _stop | _time | _measurement | _field | _value | _time | _measurement | 
+|:------:|:-----:|:-----:|:------------:|:------:|:------:|:-----:|:------------:|
+|        |       |       |              |        |        |       |              |
+
+Querying from tables outputs a table or a stream of tables with this structure:
+
+| _start | _stop | _time | _measurement | _field | _value | _time | _measurement | 
+|:------:|:-----:|:-----:|:------------:|:------:|:------:|:-----:|:------------:|
+|        |       |       |              |        |        |       |              |
+
+* _start: Query range start time (defined by range())
+* _stop: Query range stop time (defined by range())
+* _time: Data timestamp
+* _measurement: Measurement name
+* _field: Field key
+* _value: Field value
+* Tag columns: A column for each tag where the column label is the tag key and the column value is the tag value
+
 
 To create and populate the stock trades dataset:
 * [x] Connect python to a finnhub's websocketAPI and print every trade
