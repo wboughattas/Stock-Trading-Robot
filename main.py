@@ -1,10 +1,16 @@
+import os
 import websocket
 import json
 from datetime import datetime
 from pytz import timezone
-from connections import socket, token, org, bucket
-from influxdb_client import InfluxDBClient, Point, WritePrecision, WriteOptions
-from influxdb_client.client.write_api import SYNCHRONOUS
+from influxdb_client import InfluxDBClient
+from dotenv import load_dotenv
+
+load_dotenv()
+socket = os.getenv('socket')
+token = os.getenv('token')
+org = os.getenv('org')
+bucket = os.getenv('bucket')
 
 minutes_processed = {}
 minute_candlesticks = []
