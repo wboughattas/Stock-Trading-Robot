@@ -16,6 +16,7 @@ Get live Github flags from [shields io](https://shields.io/)
         - [collect-system-stat](#collect-system-stat)
         - [integrate-gradle](#integrate-gradle)
         - [logging](#logging)
+        - [notification-alerts](#notification-alerts)
         - [bloomberg-api](#bloomberg-api)
         - [nltk](#nltk)
         - [ml-predict](#ml-predict)
@@ -167,6 +168,11 @@ To create and populate the order book dataset:
 ##### logging
 * [ ] Add a logging feature (efficient/useful/not memory-heavy) 
 * [ ] https://realpython.com/python-logging/
+* [ ] .
+
+##### notification-alerts
+* [ ] monitoring and alerting
+* [ ] .
 * [ ] .
 
 ##### bloomberg-api
