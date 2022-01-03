@@ -11,18 +11,19 @@ Get live Github flags from [shields io](https://shields.io/)
 - [Roadmap](#Roadmap)
   - [Git workflow](#Git-workflow)
     - [DEV](#DEV)
-      - [feature/establish-fill-trade-db](#featureestablish-fill-trade-db)
-      - [feature/collect-system-stat](#featurecollect-system-stat)
-      - [feature/integrate-gradle](#featureintegrate-gradle)
-      - [feature/logging](#logging)
-      - [feature/bloomberg-api](#featurebloomberg-api)
-      - [feature/nltk](#featurenltk)
-      - [feature/ML-predict](#featureML-predict)
-      - [feature/ML-decision-making](#featureML-decision-making)
-      - [feature/Multi-agent-systems](#featureMulti-agent-systems)
-      - [feature/api-buy-sell](#featureapi-buy-sell)
-      - [feature/system-hardware](#featuresystem-hardware)
-      - [feature/ui](#featureui)
+      - [feature](#feature)
+        - [establish-fill-trade-db](#establish-fill-trade-db)
+        - [collect-system-stat](#collect-system-stat)
+        - [integrate-gradle](#integrate-gradle)
+        - [logging](#logging)
+        - [bloomberg-api](#bloomberg-api)
+        - [nltk](#nltk)
+        - [ml-predict](#ml-predict)
+        - [ml-decision-making](#ml-decision-making)
+        - [multi-agent-systems](#multi-agent-systems)
+        - [api-buy-sell](#api-buy-sell)
+        - [system-hardware](#system-hardware)
+        - [ui](#ui)
     - [TEST](#TEST)
     - [PROD](#PROD)
 <!--te-->
@@ -99,7 +100,8 @@ This keeps the dev version clean"
 * [ ] Edit README's structure and add new features
 
 ### DEV
-#### feature/establish-fill-trade-db
+#### feature
+##### establish-fill-trade-db
 
 Each stock has 3 datasets (sorted by time desc) with data from 2010: 
 1. live/historical stock Trades
@@ -152,60 +154,60 @@ To create and populate the order book dataset:
 * [ ] Ingest order book trades with the time attribute to local InfluxDB server recurrently
 * [ ] Lookup for historical order book trades 
 
-#### feature/integrate-gradle
+##### integrate-gradle
 * [ ] replace pip with gradle
 * [ ] update gradle with already existing requirements
 * [ ] .
 
-#### feature/logging
+##### logging
 * [ ] Add a logging feature (efficient/useful/not memory-heavy) 
 * [ ] https://realpython.com/python-logging/
 * [ ] .
 
-#### feature/bloomberg-api
+##### bloomberg-api
 * [ ] give the bloomberg api (test version => free) a look
 * [ ] integrate the bloomberg api in java
 * [ ] update gradle
 * [ ] .
 
-#### feature/nltk
+##### nltk
 * [ ] set up connection with the server and add columns with random numbers as default (for testing only) to sqlDB
 * [ ] .
 * [ ] .
 * [ ] .
 
-#### feature/ML-predict
+##### ml-predict
 * [ ] set up connection with the server and add columns with random numbers as default (for testing only) to sqlDB
 * [ ] .
 * [ ] .
 * [ ] .
 
-#### feature/ML-decision-making
+##### ml-decision-making
 * [ ] set up connection with the server and set-up random decision-making strategy (for testing only)
 * [ ] .
 * [ ] .
 * [ ] .
 
-#### feature/Multi-agent-systems
+##### multi-agent-systems
 * [ ] .
 * [ ] .
 * [ ] .
 * [ ] .
 
-#### feature/api-buy-sell
+##### api-buy-sell
 * [ ] set up a test env and use the outputs from feature/ML-decision-making to buy/sell stocks
 * [ ] .
 * [ ] .
 * [ ] .
 
-#### feature/system-hardware
+##### system-hardware
 * [ ] Backup (RAID)
 * [ ] arduino server
 * [ ] Fail system
 * [ ] automated system check
 * [ ] .
 
-#### feature/ui
+##### ui
 * [ ] Simple report on earnings/losses with more indicators
 * [ ] .
 * [ ] .
