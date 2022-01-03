@@ -154,6 +154,11 @@ To create and populate the order book dataset:
 * [ ] Ingest order book trades with the time attribute to local InfluxDB server recurrently
 * [ ] Lookup for historical order book trades 
 
+##### collect-system-stat
+* [ ] Prometheus/Telegraf Integrations into DB
+* [ ] "monitoring"/"tasks" observation and integration into DB
+* [ ] .
+
 ##### integrate-gradle
 * [ ] replace pip with gradle
 * [ ] update gradle with already existing requirements
