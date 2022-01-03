@@ -12,12 +12,15 @@ Get live Github flags from [shields io](https://shields.io/)
   - [Git workflow](#Git-workflow)
     - [DEV](#DEV)
       - [feature/establish-fill-trade-db](#featureestablish-fill-trade-db)
+      - [feature/collect-system-stat](#featurecollect-system-stat)
       - [feature/integrate-gradle](#featureintegrate-gradle)
+      - [feature/logging](#logging)
       - [feature/bloomberg-api](#featurebloomberg-api)
       - [feature/nltk](#featurenltk)
       - [feature/ML-predict](#featureML-predict)
       - [feature/ML-decision-making](#featureML-decision-making)
-      - [feature/alpaca-api-buy-sell](#featurealpaca-api-buy-sell)
+      - [feature/Multi-agent-systems](#featureMulti-agent-systems)
+      - [feature/api-buy-sell](#featureapi-buy-sell)
       - [feature/system-hardware](#featuresystem-hardware)
       - [feature/ui](#featureui)
     - [TEST](#TEST)
@@ -154,6 +157,11 @@ To create and populate the order book dataset:
 * [ ] update gradle with already existing requirements
 * [ ] .
 
+#### feature/logging
+* [ ] Add a logging feature (efficient/useful/not memory-heavy) 
+* [ ] https://realpython.com/python-logging/
+* [ ] .
+
 #### feature/bloomberg-api
 * [ ] give the bloomberg api (test version => free) a look
 * [ ] integrate the bloomberg api in java
@@ -178,7 +186,13 @@ To create and populate the order book dataset:
 * [ ] .
 * [ ] .
 
-#### feature/alpaca-api-buy-sell
+#### feature/Multi-agent-systems
+* [ ] .
+* [ ] .
+* [ ] .
+* [ ] .
+
+#### feature/api-buy-sell
 * [ ] set up a test env and use the outputs from feature/ML-decision-making to buy/sell stocks
 * [ ] .
 * [ ] .
