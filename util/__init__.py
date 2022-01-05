@@ -10,7 +10,6 @@ def epoch_to_str(dt, smallest):
     return strict_rfc3339.timestamp_to_rfc3339_utcoffset(dt)
 
 
-# todo: optimize round_time (redo without datetime conversion)
 def round_time(dt, date_delta=datetime.timedelta(minutes=1)):
     if dt == 0:
         return 0

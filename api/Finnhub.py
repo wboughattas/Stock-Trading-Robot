@@ -4,20 +4,24 @@ from livedata.Quote import Quote
 from livedata.Trade import Trade
 from queries.ingest_livedata import ingest_trade, ingest_quote
 from util import round_time
+import websocket
+websocket.enableTrace(False)
 
 
-class Finnhub(object):
+# todo: add quote attribute: average price
+class Finnhub(websocket.WebSocketApp):
     book = {}
 
-    def __init__(self, token, org, conf, write_client):
-        self.url = 'wss://ws.finnhub.io?token=' + token
+    def __init__(self, token, org, conf, write_client, **kwargs) -> None:
+        super().__init__(url='wss://ws.finnhub.io?token=' + token,
+                         on_open=self.on_open,
+                         on_message=self.on_message,
+                         on_close=self.on_close,
+                         on_error=self.on_error,
+                         **kwargs)
         self.org = org
         self.conf = conf
         self.write_client = write_client
-        self.on_open = self.on_open
-        self.on_message = self.on_message
-        self.on_close = self.on_close
-        self.on_error = self.on_error
 
     def on_open(self, ws):
         for (exchange, symbols) in self.conf['finnhub'].items():
@@ -117,9 +121,6 @@ class Finnhub(object):
                                               current_trade.volume)
                         # update current_quote
                         self.book[stock_pair]['current_quote'] = current_quote
-
-                # testing
-                print(self.book['BINANCE:ETHUSDT'])
 
     @staticmethod
     def on_close(ws):

@@ -4,28 +4,20 @@ from influxdb_client.client.flux_table import FluxStructureEncoder
 from util.backup import export
 
 
-# todo: implement inheritance and initialize buckets_api, query_api, write_api
-class InfluxDB(object):
-    def __init__(self, url, token, org, conf):
+class InfluxDB(InfluxDBClient):
+    def __init__(self, url, token, org, conf, **kwargs) -> None:
         """
-        Initialize influxDB client instance
+        Initialize custom influxDB client instance (child of InfluxDBClient)
         :param url:
         :param token:
         :param org:
-        :param conf: dict
+        :param conf:
         """
+        super().__init__(url, token, org, **kwargs)
         self.url = url
         self.token = token
         self.org = org
         self.conf = conf
-
-    def connect_influxdb(self):
-        try:
-            clientDB = InfluxDBClient(url=self.url, token=self.token, org=self.org)
-            return clientDB
-        except Exception as e:
-            # todo: logging
-            raise e
 
     def verify_buckets(self, buckets_api_, query_api_, desired_buckets_):
         try:
@@ -60,10 +52,4 @@ class InfluxDB(object):
                                                    **desired_buckets_[desired_bucket_name]),
                                                org=self.org)
         except Exception as e:
-            # todo: logging
             raise e
-
-    def connect(self):
-        client = self.connect_influxdb()
-        self.verify_buckets(client.buckets_api(), client.query_api(), self.conf['desired_buckets'])
-        return client
