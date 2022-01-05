@@ -1,24 +1,32 @@
 import os
+from dataclasses import dataclass, replace
+from pathlib import Path
+import strict_rfc3339
 import websocket
 import json
-from datetime import datetime
-from pytz import timezone
-from influxdb_client import InfluxDBClient
-from dotenv import load_dotenv
+import datetime
+import time
+from influxdb_client.client.flux_table import FluxStructureEncoder
+from influxdb_client.client.write_api import SYNCHRONOUS
+from influxdb_client import InfluxDBClient, BucketRetentionRules, Point
+from conf import conf
+from Livedata import *
+from util import epoch_to_str, round_time
+from util.backup import export
+from util.config import get_env
 
-load_dotenv()
-socket = os.getenv('socket')
-token = os.getenv('token')
-org = os.getenv('org')
-bucket = os.getenv('bucket')
-
-minutes_processed = {}
-minute_candlesticks = []
-current_trade = None
-previous_trade = None
+# stock info
+from util.connect_influxdb import connect_influxdb
 
 stock_exchange = "BINANCE"
 stock_symbol = "BTCUSDT"
+
+# trade-book
+current_trade = None
+previous_trade = None
+
+# quote-book
+current_quote = None
 
 
 def on_open(ws):
@@ -30,45 +38,79 @@ def on_open(ws):
 
 
 def on_message(ws, message):
-    global current_trade, previous_trade
-
+    global current_trade, previous_trade, current_quote
     current_trades = json.loads(message)
-    if len(current_trades['data']) > 0:
-        for idx, new_data in enumerate(current_trades['data']):
-            previous_trade = current_trade
-            current_trade = new_data
-            trade_time = datetime.fromtimestamp(current_trade['t'] / 1000, timezone('US/Eastern'))
-            trade_time_ms = trade_time.strftime('%Y-%m-%d %H:%M:%S.%f')
-            trade_time_min = trade_time.strftime('%Y-%m-%d %H:%M')
-            print('{} : {} : {} : {}'.format(current_trade['s'], trade_time_ms, current_trade['p'], current_trade['v']))
-            # ingest to trade_db
 
-            if trade_time_min not in minutes_processed:
-                minutes_processed[trade_time_min] = True
+    message_trades = len(current_trades['data'])
+    if message_trades > 0:
+        for new_trade in current_trades['data']:
+            if current_trade is not None:
+                previous_trade = Trade(current_trade.exchange,
+                                       current_trade.symbol,
+                                       current_trade.timestamp,
+                                       current_trade.price,
+                                       current_trade.volume,
+                                       current_trade.minute)
+            # initialize new Trade
+            current_trade = Trade(stock_exchange,
+                                  stock_symbol,
+                                  new_trade['t'] * 1000,
+                                  new_trade['p'],
+                                  new_trade['v'],
+                                  round_time(new_trade['t']))
+            if current_trade.timestamp <= previous_trade.timestamp:
+                current_trade = replace(current_trade, timestamp=previous_trade.timestamp + 1)
 
-                if len(minute_candlesticks) > 0:
-                    minute_candlesticks[-1]['close'] = previous_trade['p']
+            # import point to trade-book
+            write_api.write('trade-book', 'trade-data',
+                            Point('trade_data')
+                            .tag('exchange', current_trade.exchange)
+                            .tag('symbol', current_trade.symbol)
+                            .field('price', float(current_trade.price))
+                            .field('volume', float(current_trade.volume))
+                            .time(strict_rfc3339.timestamp_to_rfc3339_utcoffset(current_trade.timestamp / 1000 / 1000)))
 
-                minute_candlesticks.append({
-                    "minute": trade_time_min,
-                    "open": current_trade['p'],
-                    "high": current_trade['p'],
-                    "low": current_trade['p'],
-                    "volume": 0
-                })
+            if isinstance(current_quote, Quote):
+                # override quote volume
+                cumulative_volume = current_quote.volume + current_trade.volume
+                current_quote = replace(current_quote, volume=cumulative_volume)
 
-            if len(minute_candlesticks) > 0:
-                current_candlestick = minute_candlesticks[-1]
-                current_candlestick['volume'] += current_trade['v']
-                if current_trade['p'] > current_candlestick['high']:
-                    current_candlestick['high'] = current_trade['p']
-                if current_trade['p'] < current_candlestick['low']:
-                    current_candlestick['low'] = current_trade['p']
+                # override quote close price
+                current_quote = replace(current_quote, close=current_trade.price)
 
-            print("== Candlesticks ==")
-            for candlestick in minute_candlesticks:
-                print(candlestick)
-                # ingest to intraday_db
+                # override quote high price
+                if current_trade.price > current_quote.high:
+                    current_quote = replace(current_quote, high=current_trade.price)
+
+                # override quote low price
+                if current_trade.price < current_quote.low:
+                    current_quote = replace(current_quote, low=current_trade.price)
+
+                # import to quote-book
+                write_api.write('quote-book', 'trade-data',
+                                Point('quote_data')
+                                .tag('market', current_quote.exchange)
+                                .tag('symbol', current_quote.symbol)
+                                .tag('ticker', '1m')
+                                .field('open', float(current_quote.open))
+                                .field('high', float(current_quote.high))
+                                .field('low', float(current_quote.low))
+                                .field('close', float(current_quote.close))
+                                .time(strict_rfc3339.timestamp_to_rfc3339_utcoffset(current_quote.minute)))
+
+            if current_trade.minute > previous_trade.minute:
+                # initialize new Quote (open price initialized)
+                current_quote = Quote(current_trade.exchange,
+                                      current_trade.symbol,
+                                      current_trade.minute,
+                                      current_trade.price,
+                                      current_trade.price,
+                                      current_trade.price,
+                                      current_trade.price,
+                                      current_trade.volume)
+
+            print('trade', current_trade)
+            print('quote', current_quote)
 
 
 def on_close(ws):
@@ -80,48 +122,18 @@ def on_error(ws, error):
 
 
 if __name__ == '__main__':
+    socket, token, org = get_env()
+
+    # connect to InfluxDB2.0
+    clientDB = connect_influxdb(token, org)
+    write_api = clientDB.write_api(write_options=SYNCHRONOUS)
+    
+    print('verification complete')
+
     web_socket = websocket.WebSocketApp(socket,
                                         on_open=on_open,
                                         on_message=on_message,
                                         on_close=on_close,
                                         on_error=on_error)
-    # web_socket.run_forever()
-
-    # flux write query
-    write = \
-        'import "experimental/csv"\
-        relativeToNow = (tables=<-) =>\
-            tables\
-                |> elapsed()\
-                |> sort(columns: ["_time"], desc: true)\
-                |> cumulativeSum(columns: ["elapsed"])\
-                |> map(fn: (r) => ({ r with _time: time(v: int(v: now()) - (r.elapsed * 1000000000))}))\
-        csv.from(url: "https://influx-testdata.s3.amazonaws.com/noaa.csv")\
-            |> relativeToNow()\
-            |> to(bucket: "test-bucket", org: "test-org")'
-
-    # flux read query
-    read = \
-        'from(bucket: "temp")\
-            |> range(start: -3h)\
-            |> filter(fn: (r) => r._measurement == "average_temperature")\
-            |> filter(fn: (r) => r._field == "degrees")\
-            |> filter(fn: (r) => r.location == "coyote_creek")'
-
-    # establish a connection
-    client = InfluxDBClient(url="http://localhost:8086", token=token, org=org)
-
-    # instantiate the WriteAPI and QueryAPI
-    # write_api = client.write_api()
-    query_api = client.query_api()
-
-    # create and write the point
-    # write_api.write(bucket=bucket, org=org, record=p)
-    query_api.query(query=write)
-    # return the table and print the result
-    result = query_api.query(org=org, query=read)
-    for table in result:
-        for record in table.records:
-            print(record.get_value(), record.get_field())
-
-    print()
+    print(web_socket)
+    web_socket.run_forever()
