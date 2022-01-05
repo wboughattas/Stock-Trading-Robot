@@ -5,7 +5,7 @@ from util.backup import export
 
 
 class InfluxDB(InfluxDBClient):
-    def __init__(self, url, token, org, conf, **kwargs) -> None:
+    def __init__(self, url, token, org, conf, **kwargs):
         """
         Initialize custom influxDB client instance (child of InfluxDBClient)
         :param url:
@@ -14,8 +14,6 @@ class InfluxDB(InfluxDBClient):
         :param conf:
         """
         super().__init__(url, token, org, **kwargs)
-        self.url = url
-        self.token = token
         self.org = org
         self.conf = conf
 

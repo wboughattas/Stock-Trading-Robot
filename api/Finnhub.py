@@ -8,7 +8,6 @@ import websocket
 websocket.enableTrace(False)
 
 
-# todo: add quote attribute: average price
 class Finnhub(websocket.WebSocketApp):
     book = {}
 
