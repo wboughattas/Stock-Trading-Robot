@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import conf.livedata as livedata  # do not delete
+import conf.influxdb as influxdb  # do not delete
 
 
 def get_project_root() -> Path:
@@ -10,12 +12,14 @@ def get_project_root() -> Path:
 def get_env():
     dotenv_path = os.path.join(get_project_root(), 'venv', '.env')
     load_dotenv(dotenv_path)
+    pass
 
-    # to connect to Finnhub websocket api
-    _socket = os.getenv('socket')
 
-    # to connect to an already-set-up local SQL server
-    _token = os.getenv('token')
-    _org = os.getenv('org')
-
-    return _socket, _token, _org
+def get_conf(*modules):
+    book = {}
+    for module in modules:
+        module = globals().get(module, None)
+        if module:
+            book.update({key: value for key, value in module.__dict__.items() if
+                         not (key.startswith('__') or key.startswith('_'))})
+    return book
